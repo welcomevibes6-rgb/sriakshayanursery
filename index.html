@@ -1,0 +1,1816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Akshaya Nursery – Premium Plants & Landscaping | Kadiyam</title>
+    <meta name="description" content="Sri Akshaya Nursery, Kadiyam - 25+ years of excellence in premium plants, exotic varieties & professional landscaping services in Andhra Pradesh.">
+    <link rel="icon" href="images/logo.webp" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ============ TOP BAR ============ -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="top-bar-contacts">
+                <a href="mailto:sriakshayanursery20@gmail.com" class="top-bar-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>sriakshayanursery20@gmail.com</span>
+                </a>
+                <a href="tel:9581084942" class="top-bar-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>9581084942</span>
+                </a>
+            </div>
+            <div class="top-bar-socials">
+                <a href="https://www.instagram.com/sriakshayanursery?stkn=aG9ocmJoZHl4Zms=" target="_blank" rel="noopener noreferrer" class="top-bar-social-link" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/share/1JGCD7QtLg/" target="_blank" rel="noopener noreferrer" class="top-bar-social-link" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://wa.me/919581084942" target="_blank" rel="noopener noreferrer" class="top-bar-social-link" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-content">
+            <a href="#home" class="navbar-brand" onclick="navigateTo('home')">
+                <img loading="lazy" src="image copy 175.png" alt="Sri Akshaya Nursery Logo" class="navbar-logo">
+                <span class="navbar-title">SRI AKSHAYA NURSERY</span>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active" onclick="navigateTo('home')">Home</a></li>
+                <li><a href="#about" class="nav-link" onclick="navigateTo('about')">About Us</a></li>
+                <li class="has-dropdown">
+                    <a href="#varieties" class="nav-link" onclick="navigateTo('varieties')">Varieties <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#varieties" onclick="navigateTo('varieties','outdoor')">Outdoor Plants</a></li>
+                        <li><a href="#varieties" onclick="navigateTo('varieties','indoor')">Indoor Plants</a></li>
+                        <li><a href="#varieties" onclick="navigateTo('varieties','flowering')">Flowering Plants</a></li>
+                        <li><a href="#varieties" onclick="navigateTo('varieties','fruit')">Fruit Plants</a></li>
+                        <li><a href="#varieties" onclick="navigateTo('varieties','ficus')">Ficus</a></li>
+                        <li><a href="#varieties" onclick="navigateTo('varieties','olive')">Olive</a></li>
+                    </ul>
+                </li>
+                <li><a href="#landscaping" class="nav-link" onclick="navigateTo('landscaping')">Landscaping Services</a></li>
+                <li class="has-dropdown">
+                    <a href="#gallery" class="nav-link" onclick="navigateTo('gallery')">Gallery <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#gallery" onclick="navigateTo('gallery','photos')">Photos</a></li>
+                        <li><a href="#gallery" onclick="navigateTo('gallery','loadings')">Loading Plants</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact" class="nav-link" onclick="navigateTo('contact')">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============ PAGES ============ -->
+
+    <!-- HOME PAGE -->
+    <section class="page active" id="page-home">
+        <!-- HERO SLIDER -->
+        <div class="hero-slider" id="heroSlider">
+            <div class="slider-wrapper">
+                <div class="slide active" data-animation="zoom">
+                    <img src="image copy 165.png" alt="Sri Akshaya Nursery Premium Plants">
+                    <div class="slide-overlay"></div>
+                    <div class="hero-text">
+                        <div class="hero-line hero-line-1" id="heroLine1">Welcome To</div>
+                        <div class="hero-line hero-line-2" id="heroLine2">Sri Akshaya Nursery</div>
+                    </div>
+                </div>
+                <div class="slide" data-animation="slide-right">
+                    <img src="image copy 164.png" alt="Exotic Plant Varieties">
+                    <div class="slide-overlay"></div>
+                </div>
+                <div class="slide" data-animation="slide-left">
+                    <img src="image copy 162.png" alt="Our Nursery Garden">
+                    <div class="slide-overlay"></div>
+                </div>
+                <!-- 4TH SLIDE -->
+                <div class="slide" data-animation="fade-in-right">
+                    <img src="image copy 163.png" alt="Professional Landscaping">
+                    <div class="slide-overlay"></div>
+                </div>
+            </div>
+            <button class="slider-btn slider-prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn slider-next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+            <div class="slider-dots" id="sliderDots">
+                <span class="dot active" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+                <span class="dot" onclick="goToSlide(2)"></span>
+                <span class="dot" onclick="goToSlide(3)"></span>
+            </div>
+        </div>
+
+        <!-- HOME ABOUT SECTION -->
+        <div class="home-about">
+            <div class="home-about-bg-accent"></div>
+            <div class="container">
+                <div class="home-about-grid">
+                    <div class="home-about-image reveal-left">
+                        <div class="home-about-image-wrapper">
+                            <img loading="lazy" src="image copy 166.png" alt="Sri Akshaya Nursery">
+                            <div class="home-about-image-border"></div>
+                        </div>
+                        <div class="home-about-image-badge">
+                            <span>25+</span>
+                            <small>Years of Trust</small>
+                        </div>
+                    </div>
+                    <div class="home-about-text reveal-right">
+                        <span class="home-about-eyebrow">🌿 About Sri Akshaya Nursery</span>
+                        <h2 class="home-about-heading">About Sri Akshaya Nursery</h2>
+                        <div class="home-about-divider"></div>
+                        <p>At Sri Akshaya Nursery, we bring nature closer to you with passion, experience, and trust built over 25+ years. Located in the heart of Kadiam, Andhra Pradesh, we are proud to be one of the leading nurseries known for quality plants and professional landscaping services.</p>
+                        <a href="#about" class="btn-know-more" onclick="navigateTo('about')">
+                            Know More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ 1. OUR PLANT COLLECTION (PREMIUM FULL-WIDTH BOTANICAL SECTION) ============ -->
+        <section class="home-nursery-section section-plant-collection reveal-up" id="homePlantCollection">
+            <div class="plant-collection-bg">
+                <img src="167.png" alt="Sri Akshaya Nursery Plant Collection" class="plant-bg-img" loading="lazy">
+                <div class="plant-collection-overlay"></div>
+                <div class="plant-collection-pattern"></div>
+            </div>
+            <div class="container plant-collection-container">
+                <div class="plant-collection-content reveal-left">
+                    <div class="botanical-badge">
+                        <span class="badge-leaf">🌿</span>
+                        <span class="badge-text">OUR PLANT COLLECTION</span>
+                    </div>
+                    <h2 class="plant-collection-title">Bring Home Something Beautiful</h2>
+                    <div class="botanical-divider">
+                        <span class="divider-line"></span>
+                        <i class="fas fa-seedling divider-icon"></i>
+                        <span class="divider-line"></span>
+                    </div>
+                    <p class="plant-collection-desc">
+                        Discover a carefully grown collection of indoor plants, outdoor greenery, flowering varieties, ornamental plants, and fruit trees — selected to add lasting beauty and freshness to every space.
+                    </p>
+                    <div class="plant-collection-highlights">
+                        <div class="highlight-chip">
+                            <i class="fas fa-check"></i>
+                            <span>Indoor Foliage & Air Purifiers</span>
+                        </div>
+                        <div class="highlight-chip">
+                            <i class="fas fa-check"></i>
+                            <span>Flowering & Ornamental Pots</span>
+                        </div>
+                        <div class="highlight-chip">
+                            <i class="fas fa-check"></i>
+                            <span>High-Yield Fruit Trees</span>
+                        </div>
+                        <div class="highlight-chip">
+                            <i class="fas fa-check"></i>
+                            <span>Exotic Bonsai Cultivations</span>
+                        </div>
+                    </div>
+                    <div class="plant-collection-cta">
+                        <a href="#varieties" class="btn-botanical-solid" onclick="navigateTo('varieties')">
+                            <span>Explore Plants</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="plant-collection-visual reveal-right">
+                    <div class="specimen-frame">
+                        <div class="specimen-image-wrap">
+                            <img src="167.png" alt="Featured Blooming Bougainvillea Bonsai Specimen" class="specimen-img" loading="lazy">
+                            <div class="specimen-glass-overlay"></div>
+                        </div>
+                        <div class="specimen-tag">
+                            <div class="specimen-tag-icon"><i class="fas fa-award"></i></div>
+                            <div class="specimen-tag-info">
+                                <span class="tag-label">Featured Specimen</span>
+                                <span class="tag-title">Cultivated Bonsai & Blooms</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 2. LANDSCAPING SERVICES (SOPHISTICATED EARTHY COMPOSITION) ============ -->
+        <section class="home-nursery-section section-landscaping-services reveal-up" id="homeLandscaping">
+            <div class="container landscaping-container">
+                <div class="landscaping-grid">
+                    <!-- Left: Architectural Image Composition -->
+                    <div class="landscaping-visual reveal-left">
+                        <div class="landscaping-card-outer">
+                            <div class="landscaping-card-backdrop"></div>
+                            <div class="landscaping-img-container">
+                                <img src="168.png" alt="Sri Akshaya Landscaping Nursery Groves" class="landscaping-img" loading="lazy">
+                                <div class="landscaping-img-glare"></div>
+                            </div>
+                            <div class="landscaping-floating-card">
+                                <div class="floating-card-icon"><i class="fas fa-tree"></i></div>
+                                <div class="floating-card-body">
+                                    <div class="floating-card-stat">End-to-End Care</div>
+                                    <div class="floating-card-subtitle">Concept • Soil • Maintenance</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Content & Architectural Breakdown -->
+                    <div class="landscaping-content reveal-right">
+                        <div class="landscaping-eyebrow">
+                            <span class="eyebrow-symbol">🌳</span>
+                            <span class="eyebrow-text">LANDSCAPING SERVICES</span>
+                        </div>
+                        <h2 class="landscaping-heading">We Shape Spaces That Grow Beautifully</h2>
+                        <div class="landscaping-accent-rule"></div>
+                        <p class="landscaping-lead-text">
+                            From thoughtful garden planning and lawn development to complete landscape care, our team creates outdoor spaces that feel natural, beautiful, and easy to enjoy.
+                        </p>
+                        
+                        <div class="landscaping-pillars">
+                            <div class="pillar-item">
+                                <div class="pillar-bullet"><i class="fas fa-drafting-compass"></i></div>
+                                <div class="pillar-text">
+                                    <h4>Garden Planning & Site Design</h4>
+                                    <p>Harmonious layouts customized for residential villas, farmhouses & commercial properties.</p>
+                                </div>
+                            </div>
+                            <div class="pillar-item">
+                                <div class="pillar-bullet"><i class="fas fa-seedling"></i></div>
+                                <div class="pillar-text">
+                                    <h4>Lawn Development & Topiary</h4>
+                                    <p>Natural grass turf installation, precision grading, and sculptural greenery sculpting.</p>
+                                </div>
+                            </div>
+                            <div class="pillar-item">
+                                <div class="pillar-bullet"><i class="fas fa-hand-holding-water"></i></div>
+                                <div class="pillar-text">
+                                    <h4>Complete Landscape Care</h4>
+                                    <p>Sustainable irrigation, pruning, seasonal nourishment, and long-term vitality management.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="landscaping-action">
+                            <a href="#landscaping" class="btn-landscaping-prime" onclick="navigateTo('landscaping')">
+                                <span>Explore Landscaping</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 3. OUR GALLERY (EDITORIAL CURATED GALLERY SHOWCASE) ============ -->
+        <section class="home-nursery-section section-nursery-gallery reveal-up" id="homeGallery">
+            <div class="container gallery-editorial-container">
+                <!-- Editorial Centered Header -->
+                <div class="gallery-editorial-header">
+                    <div class="gallery-pill-eyebrow">
+                        <span class="gallery-icon-sym">📸</span>
+                        <span>OUR GALLERY</span>
+                    </div>
+                    <h2 class="gallery-editorial-title">A Glimpse Into Our Green World</h2>
+                    <p class="gallery-editorial-desc">
+                        Take a closer look at our nursery, plants, gardens, and landscaping work through a collection of real moments from Sri Akshaya Nursery.
+                    </p>
+                </div>
+
+                <!-- Editorial Visual Showcase Composition -->
+                <div class="gallery-editorial-layout">
+                    <!-- Main Masterpiece Frame with 169.png -->
+                    <div class="gallery-curated-showcase reveal-left">
+                        <div class="editorial-art-frame">
+                            <div class="art-frame-inner">
+                                <img src="169.png" alt="Curated Botanical Moments at Sri Akshaya Nursery" class="gallery-feature-img" loading="lazy">
+                                <div class="art-frame-caption">
+                                    <span class="caption-tag">Live Showcase</span>
+                                    <span class="caption-text">Living Botanical Interiors & Plant Craftsmanship</span>
+                                </div>
+                            </div>
+                            <div class="art-frame-passepartout"></div>
+                        </div>
+                    </div>
+
+                    <!-- Editorial Side Narrative & Gallery Direct Access -->
+                    <div class="gallery-narrative-card reveal-right">
+                        <div class="narrative-badge">
+                            <i class="fas fa-camera-retro"></i>
+                            <span>REAL MOMENTS</span>
+                        </div>
+                        <h3 class="narrative-heading">Curated Perspectives From Our Kadiam Grounds</h3>
+                        <p class="narrative-p">
+                            Every leaf tells a story. From our sprawling cultivation rows to custom-tailored private gardens, explore firsthand how we bring lush, vibrant life to landscapes across the country.
+                        </p>
+                        <div class="gallery-category-chips">
+                            <span class="cat-chip"><i class="fas fa-images"></i> 60+ Photos</span>
+                            <span class="cat-chip"><i class="fas fa-video"></i> Video Tours</span>
+                            <span class="cat-chip"><i class="fas fa-truck-loading"></i> Daily Loadings</span>
+                        </div>
+                        <div class="gallery-narrative-action">
+                            <a href="#gallery" class="btn-gallery-editorial" onclick="navigateTo('gallery')">
+                                <span>View Gallery</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ HOME GET IN TOUCH SECTION ============ -->
+        <section class="home-contact-section reveal-up" id="homeContactSection">
+            <div class="home-contact-bg-pattern"></div>
+            <div class="container home-contact-container">
+                <!-- Section Header -->
+                <div class="home-contact-header">
+                    <div class="contact-eyebrow-badge">
+                        <i class="fas fa-seedling"></i>
+                        <span>REACH OUT TO US</span>
+                    </div>
+                    <h2 class="home-contact-title">GET IN TOUCH WITH US</h2>
+                    <div class="home-contact-rule">
+                        <span class="rule-line"></span>
+                        <i class="fas fa-leaf rule-leaf"></i>
+                        <span class="rule-line"></span>
+                    </div>
+                    <p class="home-contact-subtitle">
+                        Looking for quality plants or professional landscaping services? Come visit us or get in touch with our team — we are happy to help you bring more green into your space.
+                    </p>
+                </div>
+
+                <!-- Two-Part Sophisticated Layout -->
+                <div class="home-contact-grid">
+                    <!-- LEFT SIDE: NURSERY INTRODUCTION -->
+                    <div class="nursery-intro-card reveal-left">
+                        <div class="intro-card-glow"></div>
+                        <div class="intro-card-inner">
+                            <div class="intro-heritage-badge">
+                                <span class="heritage-dot"></span>
+                                <span>KADIYAM NURSERY BELT</span>
+                            </div>
+
+                            <h3 class="intro-brand-name">SRI AKSHAYA NURSERY</h3>
+                            <div class="intro-sub-brand">Kadiyam's Green Tradition</div>
+
+                            <blockquote class="intro-quote">
+                                <i class="fas fa-quote-left quote-mark"></i>
+                                <p>“Rooted in Kadiyam. Grown with care. Bringing nature closer to every space.”</p>
+                            </blockquote>
+
+                            <div class="intro-details-list">
+                                <div class="intro-detail-item">
+                                    <div class="detail-icon-wrap"><i class="fas fa-map-marker-alt"></i></div>
+                                    <div class="detail-content">
+                                        <span class="detail-label">NURSERY LOCATION</span>
+                                        <span class="detail-value">Kadiapulanka, Kadiyam, Andhra Pradesh</span>
+                                    </div>
+                                </div>
+                                <div class="intro-detail-item">
+                                    <div class="detail-icon-wrap"><i class="fas fa-leaf"></i></div>
+                                    <div class="detail-content">
+                                        <span class="detail-label">OUR EXPERTISE</span>
+                                        <span class="detail-value">All Kind of Plant Supply &amp; Landscaping Works</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="intro-services-tags">
+                                <span class="service-pill"><i class="fas fa-seedling"></i> Bulk Plant Supply</span>
+                                <span class="service-pill"><i class="fas fa-tree"></i> Turnkey Landscaping</span>
+                                <span class="service-pill"><i class="fas fa-truck"></i> Pan-India Dispatch</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT SIDE: CONTACT DETAILS & GOOGLE MAP CARD -->
+                    <div class="contact-details-card reveal-right">
+                        <div class="details-card-inner">
+                            <!-- Proprietor Header -->
+                            <div class="proprietor-banner">
+                                <div class="proprietor-icon"><i class="fas fa-user-tie"></i></div>
+                                <div class="proprietor-info">
+                                    <span class="proprietor-label">PROPRIETORS</span>
+                                    <h4 class="proprietor-name">PROP. BNVVS SWAMY &amp; BADRI</h4>
+                                </div>
+                            </div>
+
+                            <!-- Phone Numbers Area -->
+                            <div class="contact-phone-block">
+                                <div class="phone-block-header">
+                                    <div class="phone-icon-wrap"><i class="fas fa-phone-volume"></i></div>
+                                    <div class="phone-block-title">
+                                        <span class="block-sub">DIRECT INQUIRIES</span>
+                                        <strong>CALL US</strong>
+                                    </div>
+                                </div>
+                                <div class="phone-links-grid">
+                                    <a href="tel:9618676266" class="phone-action-btn" aria-label="Call 9618676266">
+                                        <span class="btn-dial-icon"><i class="fas fa-phone-alt"></i></span>
+                                        <div class="btn-phone-text">
+                                            <span class="phone-num">9618676266</span>
+                                            <span class="tap-hint">Tap to Call</span>
+                                        </div>
+                                    </a>
+                                    <a href="tel:9581084942" class="phone-action-btn" aria-label="Call 9581084942">
+                                        <span class="btn-dial-icon"><i class="fas fa-phone-alt"></i></span>
+                                        <div class="btn-phone-text">
+                                            <span class="phone-num">9581084942</span>
+                                            <span class="tap-hint">Tap to Call</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Location Section -->
+                            <div class="contact-loc-block">
+                                <div class="loc-icon-wrap"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="loc-text-wrap">
+                                    <span class="loc-label">LOCATION</span>
+                                    <p class="loc-address">Kadiapulanka, Kadiyam, Andhra Pradesh</p>
+                                </div>
+                            </div>
+
+                            <!-- Integrated Google Map Area -->
+                            <div class="integrated-map-wrap">
+                                <div class="map-frame-box">
+                                    <iframe 
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15267.0!2d81.825!3d16.915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37a1f5!2sKadiapulanka%2C+Andhra+Pradesh!5e0!3m2!1sen!2sin!4v1"
+                                        title="Kadiapulanka, Kadiyam Location Map"
+                                        loading="lazy" 
+                                        referrerpolicy="no-referrer-when-downgrade"
+                                        class="integrated-map-iframe">
+                                    </iframe>
+                                    <div class="map-overlay-badge">
+                                        <i class="fas fa-map-pin"></i>
+                                        <span>Kadiapulanka, Kadiyam</span>
+                                    </div>
+                                </div>
+                                <div class="map-action-row">
+                                    <a href="https://maps.google.com/?q=Kadiapulanka,+Kadiyam,+Andhra+Pradesh" 
+                                       target="_blank" 
+                                       rel="noopener" 
+                                       class="btn-view-location">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span>View Location</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Main CTA Button -->
+                            <div class="contact-primary-action">
+                                <button type="button" class="btn-get-in-touch" onclick="navigateTo('contact')">
+                                    <span>GET IN TOUCH</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- ABOUT PAGE -->
+    <section class="page" id="page-about">
+        <!-- 1. ABOUT HERO / INTRODUCTION (BACKGROUND: 164.png) -->
+        <div class="about-hero-section reveal-up">
+            <div class="about-hero-bg">
+                <img src="164.png" alt="Sri Akshaya Nursery Kadiyam" class="about-hero-img" loading="lazy">
+                <div class="about-hero-overlay"></div>
+            </div>
+            <div class="container about-hero-container">
+                <div class="about-hero-badge">
+                    <span class="badge-leaf">🌿</span>
+                    <span>ESTABLISHED HORTICULTURE HERITAGE</span>
+                </div>
+                <h1 class="about-hero-title">ABOUT SRI AKSHAYA NURSERY</h1>
+                <div class="about-hero-divider">
+                    <span class="divider-line"></span>
+                    <i class="fas fa-seedling divider-icon"></i>
+                    <span class="divider-line"></span>
+                </div>
+                <p class="about-hero-subtitle">Rooted in Kadiyam. Growing Green Across the World.</p>
+            </div>
+        </div>
+
+        <div class="about-page-body">
+            <!-- 2. OUR STORY — IMAGE + CONTENT -->
+            <section class="about-story-section reveal-up">
+                <div class="container">
+                    <div class="about-story-grid">
+                        <div class="story-image-wrap reveal-left">
+                            <div class="story-img-card">
+                                <img src="151.png" alt="Ravenala Traveller's Palm - Sri Akshaya Nursery" class="story-img" loading="lazy">
+                                <div class="story-img-badge">
+                                    <i class="fas fa-seedling"></i>
+                                    <span>30+ Years Horticulture Tradition</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="story-content reveal-right">
+                            <div class="about-section-eyebrow">
+                                <span class="eyebrow-dot"></span>
+                                <span>OUR STORY</span>
+                            </div>
+                            <h2 class="about-section-heading">Growing With Kadiyam's Green Heritage</h2>
+                            <div class="about-gold-rule"></div>
+                            <p class="story-lead">
+                                Sri Akshaya Nursery is rooted in Kadiyam, Andhra Pradesh — one of India's best-known horticulture and nursery hubs. With 30+ years of experience in horticulture, we have grown with a simple purpose: to supply healthy, quality plants and create greener spaces for homes, businesses and landscapes.
+                            </p>
+                            <p class="story-text">
+                                From beautiful ornamental plants and flowering varieties to fruit plants, avenue trees, big trees and landscaping greenery, we offer a wide range of plants carefully grown and supplied with attention to quality.
+                            </p>
+                            <blockquote class="story-quote">
+                                <i class="fas fa-quote-left quote-icon"></i>
+                                <p>“Every healthy plant begins with good care, good soil and a little patience.”</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. PLANT VARIETIES — PREMIUM BOTANICAL SHOWCASE (BACKGROUND: 164.png) -->
+            <section class="about-varieties-section reveal-up" id="aboutVarietiesSection">
+                <div class="varieties-bg-layer">
+                    <img src="164.png" alt="Sri Akshaya Nursery Botanical Garden" class="varieties-bg-img" loading="lazy">
+                    <div class="varieties-bg-overlay"></div>
+                </div>
+
+                <div class="container varieties-container">
+                    <!-- Varieties Header Area: Compact, Centered, Elegant -->
+                    <div class="varieties-header-box reveal-up">
+                        <div class="varieties-eyebrow">
+                            <span class="eyebrow-leaf">🌿</span>
+                            <span>OUR GREEN COLLECTION</span>
+                        </div>
+                        <h2 class="varieties-title">PLANT VARIETIES</h2>
+                        <div class="varieties-title-divider">
+                            <span class="divider-line"></span>
+                            <i class="fas fa-seedling divider-icon"></i>
+                            <span class="divider-line"></span>
+                        </div>
+                        <p class="varieties-quote-text">
+                            “Every variety has its own character — together, they create a greener world.”
+                        </p>
+                    </div>
+
+                    <!-- Botanical Collection List / Editorial Nursery Layout -->
+                    <div class="varieties-collection-card reveal-up">
+                        <div class="varieties-collection-list">
+                            <!-- 01 Outdoor Plants -->
+                            <div class="variety-editorial-row reveal-up" onclick="navigateTo('varieties','outdoor')" role="button" tabindex="0">
+                                <div class="variety-row-left">
+                                    <span class="variety-num">01</span>
+                                    <span class="variety-icon-accent">🌳</span>
+                                    <div class="variety-row-content">
+                                        <div class="variety-row-header">
+                                            <h3 class="variety-name">Outdoor Plants</h3>
+                                        </div>
+                                        <p class="variety-description">Sun-thriving garden shrubs, avenue greenery &amp; landscape foliage</p>
+                                    </div>
+                                </div>
+                                <div class="variety-row-action">
+                                    <span class="variety-action-text">Explore</span>
+                                    <span class="variety-action-icon"><i class="fas fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="variety-item-divider"></div>
+
+                            <!-- 02 Indoor Plants -->
+                            <div class="variety-editorial-row reveal-up" onclick="navigateTo('varieties','indoor')" role="button" tabindex="0">
+                                <div class="variety-row-left">
+                                    <span class="variety-num">02</span>
+                                    <span class="variety-icon-accent">🪴</span>
+                                    <div class="variety-row-content">
+                                        <div class="variety-row-header">
+                                            <h3 class="variety-name">Indoor Plants</h3>
+                                        </div>
+                                        <p class="variety-description">Lush air-purifying foliage, shade varieties &amp; aesthetic interior potted plants</p>
+                                    </div>
+                                </div>
+                                <div class="variety-row-action">
+                                    <span class="variety-action-text">Explore</span>
+                                    <span class="variety-action-icon"><i class="fas fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="variety-item-divider"></div>
+
+                            <!-- 03 Flowering Plants -->
+                            <div class="variety-editorial-row reveal-up" onclick="navigateTo('varieties','flowering')" role="button" tabindex="0">
+                                <div class="variety-row-left">
+                                    <span class="variety-num">03</span>
+                                    <span class="variety-icon-accent">🌸</span>
+                                    <div class="variety-row-content">
+                                        <div class="variety-row-header">
+                                            <h3 class="variety-name">Flowering Plants</h3>
+                                        </div>
+                                        <p class="variety-description">Vibrant blooming bougainvillea, ornamental perennials &amp; seasonal floral displays</p>
+                                    </div>
+                                </div>
+                                <div class="variety-row-action">
+                                    <span class="variety-action-text">Explore</span>
+                                    <span class="variety-action-icon"><i class="fas fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="variety-item-divider"></div>
+
+                            <!-- 04 Fruit Plants -->
+                            <div class="variety-editorial-row reveal-up" onclick="navigateTo('varieties','fruit')" role="button" tabindex="0">
+                                <div class="variety-row-left">
+                                    <span class="variety-num">04</span>
+                                    <span class="variety-icon-accent">🍊</span>
+                                    <div class="variety-row-content">
+                                        <div class="variety-row-header">
+                                            <h3 class="variety-name">Fruit Plants</h3>
+                                        </div>
+                                        <p class="variety-description">High-yield fruit saplings, exotic grafted cultivars &amp; orchard varieties</p>
+                                    </div>
+                                </div>
+                                <div class="variety-row-action">
+                                    <span class="variety-action-text">Explore</span>
+                                    <span class="variety-action-icon"><i class="fas fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="variety-item-divider"></div>
+
+                            <!-- 05 Ficus -->
+                            <div class="variety-editorial-row reveal-up" onclick="navigateTo('varieties','ficus')" role="button" tabindex="0">
+                                <div class="variety-row-left">
+                                    <span class="variety-num">05</span>
+                                    <span class="variety-icon-accent">🌿</span>
+                                    <div class="variety-row-content">
+                                        <div class="variety-row-header">
+                                            <h3 class="variety-name">Ficus</h3>
+                                        </div>
+                                        <p class="variety-description">Architectural topiary, robust ficus bonsai &amp; iconic umbrella canopy trees</p>
+                                    </div>
+                                </div>
+                                <div class="variety-row-action">
+                                    <span class="variety-action-text">Explore</span>
+                                    <span class="variety-action-icon"><i class="fas fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+
+                            <div class="variety-item-divider"></div>
+
+                            <!-- 06 Olive -->
+                            <div class="variety-editorial-row reveal-up" onclick="navigateTo('varieties','olive')" role="button" tabindex="0">
+                                <div class="variety-row-left">
+                                    <span class="variety-num">06</span>
+                                    <span class="variety-icon-accent">🫒</span>
+                                    <div class="variety-row-content">
+                                        <div class="variety-row-header">
+                                            <h3 class="variety-name">Olive</h3>
+                                        </div>
+                                        <p class="variety-description">Specimen imported olive trees, ancient character trunks &amp; luxury focal specimens</p>
+                                    </div>
+                                </div>
+                                <div class="variety-row-action">
+                                    <span class="variety-action-text">Explore</span>
+                                    <span class="variety-action-icon"><i class="fas fa-arrow-right"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Botanical Card Footer Note -->
+                        <div class="varieties-panel-footer">
+                            <div class="varieties-footer-badge">
+                                <i class="fas fa-leaf"></i>
+                                <span>Cultivated in Kadiyam — Supplying healthy plant varieties across India</span>
+                            </div>
+                            <a href="#varieties" class="varieties-explore-btn" onclick="navigateTo('varieties')">
+                                <span>View Full Plant Catalog</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. KADIYAM — OUR ROOTS -->
+            <section class="about-roots-section reveal-up">
+                <div class="roots-bg-pattern"></div>
+                <div class="container roots-container">
+                    <div class="roots-header">
+                        <div class="roots-pill-badge">
+                            <i class="fas fa-location-dot"></i>
+                            <span>REGIONAL HERITAGE</span>
+                        </div>
+                        <h2 class="roots-main-title">FROM THE HEART OF KADIYAM</h2>
+                        <h3 class="roots-sub-title">Kadiyam — A Legacy of Growing Green</h3>
+                        <div class="about-gold-rule center-rule"></div>
+                        <p class="roots-desc">
+                            Located in Kadiapulanka, Kadiyam, Andhra Pradesh, Sri Akshaya Nursery is part of the region's rich horticultural landscape. Kadiyam is widely known as a major nursery hub, where generations of growers have built a strong tradition of cultivating and supplying plants.
+                        </p>
+                        <div class="roots-location-card">
+                            <div class="roots-loc-pin"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="roots-loc-info">
+                                <strong>📍 Kadiapulanka, Kadiyam, Andhra Pradesh</strong>
+                                <span>The Horticultural Heartland of South India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. HORTICULTURE & LANDSCAPING -->
+            <section class="about-landscaping-section reveal-up">
+                <div class="container">
+                    <div class="about-landscaping-card">
+                        <div class="landscaping-card-content">
+                            <div class="about-section-eyebrow light-eyebrow">
+                                <span class="eyebrow-dot"></span>
+                                <span>MORE THAN PLANTS</span>
+                            </div>
+                            <h2 class="landscaping-card-title">Complete Green Solutions</h2>
+                            <p class="landscaping-card-desc">
+                                Our work goes beyond plant supply. We support homes, gardens, businesses and large outdoor spaces with landscaping solutions, garden greenery and a wide range of plants for different environments.
+                            </p>
+                            <div class="experience-stat-highlight">
+                                <div class="stat-num-badge">
+                                    <span class="exp-num">30+</span>
+                                    <span class="exp-label">YEARS</span>
+                                </div>
+                                <div class="stat-text-badge">
+                                    <strong>30+ YEARS OF HORTICULTURE EXPERIENCE</strong>
+                                    <span>Plant Supply • Landscaping • Garden Development • Large Trees • Ornamental Plants</span>
+                                </div>
+                            </div>
+                            <div class="landscaping-services-strip">
+                                <span class="strip-pill">Plant Supply</span>
+                                <span class="strip-dot">•</span>
+                                <span class="strip-pill">Landscaping</span>
+                                <span class="strip-dot">•</span>
+                                <span class="strip-pill">Garden Development</span>
+                                <span class="strip-dot">•</span>
+                                <span class="strip-pill">Large Trees</span>
+                                <span class="strip-dot">•</span>
+                                <span class="strip-pill">Ornamental Plants</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. QUALITY PROMISE SECTION -->
+            <section class="about-quality-section reveal-up">
+                <div class="container">
+                    <div class="quality-header">
+                        <div class="about-section-eyebrow">
+                            <span class="eyebrow-dot"></span>
+                            <span>OUR CORE PROMISE</span>
+                        </div>
+                        <h2 class="about-section-heading center">QUALITY THAT STARTS FROM THE ROOTS</h2>
+                        <div class="about-gold-rule center-rule"></div>
+                    </div>
+                    <div class="quality-cards-grid">
+                        <div class="quality-promise-card">
+                            <div class="quality-card-icon"><i class="fas fa-seedling"></i></div>
+                            <h3>🌱 QUALITY PLANTS</h3>
+                            <p>Healthy plants selected and grown with care.</p>
+                        </div>
+                        <div class="quality-promise-card">
+                            <div class="quality-card-icon"><i class="fas fa-truck-fast"></i></div>
+                            <h3>🚚 PLANT SUPPLY</h3>
+                            <p>Reliable supply for individual gardens, projects and large requirements.</p>
+                        </div>
+                        <div class="quality-promise-card">
+                            <div class="quality-card-icon"><i class="fas fa-leaf"></i></div>
+                            <h3>🌿 WIDE VARIETY</h3>
+                            <p>Indoor, outdoor, flowering, fruit, ornamental and large tree varieties.</p>
+                        </div>
+                        <div class="quality-promise-card">
+                            <div class="quality-card-icon"><i class="fas fa-certificate"></i></div>
+                            <h3>✨ QUALITY ASSURANCE</h3>
+                            <p>We focus on healthy growth, careful handling and dependable plant quality.</p>
+                        </div>
+                        <div class="quality-promise-card">
+                            <div class="quality-card-icon"><i class="fas fa-globe"></i></div>
+                            <h3>🌍 WIDER REACH</h3>
+                            <p>Plant supply for customers across India and selected export requirements.</p>
+                        </div>
+                        <div class="quality-promise-card">
+                            <div class="quality-card-icon"><i class="fas fa-tree-city"></i></div>
+                            <h3>🏡 LANDSCAPING</h3>
+                            <p>Green solutions for gardens, properties and outdoor spaces.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. OWNERS / NURSERY IDENTITY -->
+            <section class="about-identity-section reveal-up">
+                <div class="container">
+                    <div class="about-identity-card">
+                        <div class="identity-emblem">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="identity-nursery-title">SRI AKSHAYA NURSERY</h3>
+                        <p class="identity-props">Prop. Badri &amp; B.N.V.V.S Swamy</p>
+                        <p class="identity-address">📍 Kadiapulanka, Kadiyam, Andhra Pradesh</p>
+                        <div class="identity-rule"></div>
+                        <p class="identity-tagline">“Growing with experience. Supplying with trust.”</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- VARIETIES PAGE -->
+    <section class="page" id="page-varieties">
+        <div class="varieties-hero" data-page="varieties">
+            <img loading="lazy" src="images/hero2.webp" alt="Our Plant Varieties Banner" class="varieties-hero-bg">
+            <div class="varieties-hero-overlay"></div>
+            <div class="varieties-hero-content">
+                <span class="varieties-hero-eyebrow">SRI AKSHAYA NURSERY</span>
+                <h1 class="varieties-hero-title">Our Plant Varieties</h1>
+                <p class="varieties-hero-sub">Explore the greenery we grow, nurture and supply from Kadiyam.</p>
+                <div class="varieties-hero-line"></div>
+            </div>
+        </div>
+        <div class="varieties-content">
+            <div class="container">
+                <div class="varieties-collection-header reveal-up">
+                    <span class="varieties-eyebrow">GROWN WITH CARE</span>
+                    <h2 class="varieties-collection-title">Our Plant Collection</h2>
+                    <p class="varieties-collection-quote">"Every variety has its own character — together, they create a greener world."</p>
+                </div>
+                <div class="varieties-category-section reveal-up">
+                    <div class="varieties-category-accent-left">🍃</div>
+                    <div class="varieties-category-accent-right">🌱</div>
+                    <div class="varieties-category-inner">
+                        <div class="varieties-category-label">Browse by Category</div>
+                        <div class="varieties-filter-bar" id="filterButtons">
+                            <button class="varieties-filter-pill active" data-filter="all">
+                                <span class="pill-icon">🌿</span>
+                                <span class="pill-text">All Plants</span>
+                            </button>
+                            <button class="varieties-filter-pill" data-filter="outdoor">
+                                <span class="pill-icon">🌳</span>
+                                <span class="pill-text">Outdoor</span>
+                            </button>
+                            <button class="varieties-filter-pill" data-filter="indoor">
+                                <span class="pill-icon">🪴</span>
+                                <span class="pill-text">Indoor</span>
+                            </button>
+                            <button class="varieties-filter-pill" data-filter="flowering">
+                                <span class="pill-icon">🌸</span>
+                                <span class="pill-text">Flowering</span>
+                            </button>
+                            <button class="varieties-filter-pill" data-filter="fruit">
+                                <span class="pill-icon">🍊</span>
+                                <span class="pill-text">Fruit</span>
+                            </button>
+                            <button class="varieties-filter-pill" data-filter="ficus">
+                                <span class="pill-icon">🌿</span>
+                                <span class="pill-text">Ficus</span>
+                            </button>
+                            <button class="varieties-filter-pill" data-filter="olive">
+                                <span class="pill-icon">🫒</span>
+                                <span class="pill-text">Olive</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="varieties-category-vine"></div>
+                </div>
+                <div class="varieties-grid" id="plantsGrid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LANDSCAPING PAGE -->
+    <section class="page" id="page-landscaping">
+        <!-- 1. LANDSCAPING SERVICES HERO -->
+        <div class="ls-hero" data-page="landscaping">
+            <img loading="lazy" src="164.png" onerror="this.onerror=null; this.src='image copy 95.png';" alt="Landscaping Services Banner" class="ls-hero-bg">
+            <div class="ls-hero-overlay"></div>
+            <div class="ls-hero-pattern"></div>
+            <div class="ls-hero-content">
+                <span class="ls-hero-eyebrow">SRI AKSHAYA NURSERY</span>
+                <h1 class="ls-hero-title" id="landscapingHeroTitle" aria-label="LANDSCAPING SERVICES">
+                    <span class="ls-char" style="--char-i: 0;">L</span><span class="ls-char" style="--char-i: 1;">A</span><span class="ls-char" style="--char-i: 2;">N</span><span class="ls-char" style="--char-i: 3;">D</span><span class="ls-char" style="--char-i: 4;">S</span><span class="ls-char" style="--char-i: 5;">C</span><span class="ls-char" style="--char-i: 6;">A</span><span class="ls-char" style="--char-i: 7;">P</span><span class="ls-char" style="--char-i: 8;">I</span><span class="ls-char" style="--char-i: 9;">N</span><span class="ls-char" style="--char-i: 10;">G</span><span class="ls-char ls-space" style="--char-i: 11;">&nbsp;</span><span class="ls-char" style="--char-i: 12;">S</span><span class="ls-char" style="--char-i: 13;">E</span><span class="ls-char" style="--char-i: 14;">R</span><span class="ls-char" style="--char-i: 15;">V</span><span class="ls-char" style="--char-i: 16;">I</span><span class="ls-char" style="--char-i: 17;">C</span><span class="ls-char" style="--char-i: 18;">E</span><span class="ls-char" style="--char-i: 19;">S</span>
+                </h1>
+                <p class="ls-hero-quote">“We don't just design landscapes — we create living spaces that grow beautifully with time.”</p>
+                <div class="ls-hero-divider"></div>
+            </div>
+        </div>
+
+        <div class="ls-page-body">
+            <!-- 2. INTRODUCTION -->
+            <div class="ls-intro-section">
+                <div class="container">
+                    <div class="ls-intro-card reveal-up">
+                        <span class="ls-intro-eyebrow">DESIGN • CREATE • GROW</span>
+                        <h2 class="ls-intro-heading">Transforming Outdoor Spaces Into Living Landscapes</h2>
+                        <p class="ls-intro-text">
+                            From thoughtful garden design to complete landscape development, Sri Akshaya Nursery brings together plants, planning and horticultural experience to create outdoor spaces that feel natural, beautiful and timeless.
+                        </p>
+                        <div class="ls-intro-quote-wrap">
+                            <span class="ls-botanical-symbol">🌿</span>
+                            <blockquote class="ls-intro-quote">
+                                “A beautiful landscape begins with the right vision and grows with the right plants.”
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. LANDSCAPING SERVICES — EDITORIAL ALTERNATING SHOWCASE -->
+            <div class="ls-services-container">
+                <div class="container">
+                    
+                    <!-- SERVICE 01: GARDEN DESIGN -->
+                    <article class="ls-service-item reveal-up" id="ls-service-01">
+                        <div class="ls-service-media">
+                            <div class="ls-media-main-wrap" onclick="openLightbox('170.png', ['170.png', 'images/garden-29.webp', '171.png', '172.png', '173.png'])">
+                                <img src="170.png" onerror="this.onerror=null; this.src='image copy 170.png';" alt="Garden Design by Sri Akshaya Nursery" class="ls-media-main" loading="lazy">
+                                <span class="ls-media-zoom-hint">🔍 Expand View</span>
+                            </div>
+                            <div class="ls-media-supporting-wrap" onclick="openLightbox('images/garden-29.webp', ['170.png', 'images/garden-29.webp'])">
+                                <img src="images/garden-29.webp" alt="Garden Layout Sample" class="ls-media-supporting" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="ls-service-info">
+                            <div class="ls-service-header">
+                                <span class="ls-service-num">01</span>
+                                <span class="ls-service-icon">🌿</span>
+                            </div>
+                            <h3 class="ls-service-title">GARDEN DESIGN</h3>
+                            <p class="ls-service-tagline">“Spaces planned with purpose, balance and natural beauty.”</p>
+                            <p class="ls-service-desc">
+                                Create beautiful garden layouts using carefully selected plants, trees and greenery suited to the space. Every layout is calibrated for sun exposure, soil conditions, and lifelong aesthetic harmony.
+                            </p>
+                            <div class="ls-service-tags">
+                                <span class="ls-tag">Residential Gardens</span>
+                                <span class="ls-tag">Courtyard Landscaping</span>
+                                <span class="ls-tag">Terrace Greenery</span>
+                            </div>
+                            <a href="https://wa.me/919390599799?text=Hello%20Sri%20Akshaya%20Nursery,%20I%20am%20interested%20in%20your%20Garden%20Design%20services." target="_blank" class="ls-service-btn">
+                                <span>Consult on Garden Design</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <div class="ls-item-separator"></div>
+
+                    <!-- SERVICE 02: LANDSCAPE DEVELOPMENT (REVERSED) -->
+                    <article class="ls-service-item ls-reversed reveal-up" id="ls-service-02">
+                        <div class="ls-service-media">
+                            <div class="ls-media-main-wrap" onclick="openLightbox('171.png', ['171.png', 'images/garden-96.webp', '170.png', '172.png', '173.png'])">
+                                <img src="171.png" onerror="this.onerror=null; this.src='image copy 171.png';" alt="Landscape Development in Progress" class="ls-media-main" loading="lazy">
+                                <span class="ls-media-zoom-hint">🔍 Expand View</span>
+                            </div>
+                            <div class="ls-media-supporting-wrap" onclick="openLightbox('images/garden-96.webp', ['171.png', 'images/garden-96.webp'])">
+                                <img src="images/garden-96.webp" alt="Landscape Execution" class="ls-media-supporting" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="ls-service-info">
+                            <div class="ls-service-header">
+                                <span class="ls-service-num">02</span>
+                                <span class="ls-service-icon">🌱</span>
+                            </div>
+                            <h3 class="ls-service-title">LANDSCAPE DEVELOPMENT</h3>
+                            <p class="ls-service-tagline">“From an open space to a complete green environment.”</p>
+                            <p class="ls-service-desc">
+                                Transform outdoor areas into beautifully planned landscapes with thoughtful plant placement and natural visual flow. We manage terrain contouring, plant establishment, and holistic landscape structure.
+                            </p>
+                            <div class="ls-service-tags">
+                                <span class="ls-tag">Site Transformation</span>
+                                <span class="ls-tag">Soil Enrichment</span>
+                                <span class="ls-tag">Turnkey Greenery</span>
+                            </div>
+                            <a href="https://wa.me/919390599799?text=Hello%20Sri%20Akshaya%20Nursery,%20I%20am%20interested%20in%20your%20Landscape%20Development%20services." target="_blank" class="ls-service-btn">
+                                <span>Plan Your Landscape</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- QUOTE MOMENT 1 -->
+                    <div class="ls-quote-moment reveal-up">
+                        <div class="ls-quote-inner">
+                            <span class="ls-quote-leaf">🍃</span>
+                            <blockquote class="ls-quote-text">
+                                “Where greenery meets thoughtful design, outdoor spaces come alive.”
+                            </blockquote>
+                            <span class="ls-quote-author">Sri Akshaya Nursery • Kadiyam</span>
+                        </div>
+                    </div>
+
+                    <!-- SERVICE 03: TREE & LARGE PLANTING -->
+                    <article class="ls-service-item reveal-up" id="ls-service-03">
+                        <div class="ls-service-media">
+                            <div class="ls-media-main-wrap" onclick="openLightbox('172.png', ['172.png', 'images/garden-34.webp', '170.png', '171.png', '173.png'])">
+                                <img src="172.png" onerror="this.onerror=null; this.src='image copy 172.png';" alt="Tree and Large Planting" class="ls-media-main" loading="lazy">
+                                <span class="ls-media-zoom-hint">🔍 Expand View</span>
+                            </div>
+                            <div class="ls-media-supporting-wrap" onclick="openLightbox('images/garden-34.webp', ['172.png', 'images/garden-34.webp'])">
+                                <img src="images/garden-34.webp" alt="Large Palm Planting" class="ls-media-supporting" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="ls-service-info">
+                            <div class="ls-service-header">
+                                <span class="ls-service-num">03</span>
+                                <span class="ls-service-icon">🌳</span>
+                            </div>
+                            <h3 class="ls-service-title">TREE & LARGE PLANTING</h3>
+                            <p class="ls-service-tagline">“Bring structure, shade and character to your landscape.”</p>
+                            <p class="ls-service-desc">
+                                Supply and placement of trees, large plants and established greenery for residential, commercial and larger landscape projects. Safe transport, root ball preservation, and precision positioning.
+                            </p>
+                            <div class="ls-service-tags">
+                                <span class="ls-tag">Avenue Trees</span>
+                                <span class="ls-tag">Specimen Palms</span>
+                                <span class="ls-tag">Boundary Screens</span>
+                            </div>
+                            <a href="https://wa.me/919390599799?text=Hello%20Sri%20Akshaya%20Nursery,%20I%20am%20interested%20in%20Tree%20and%20Large%20Planting." target="_blank" class="ls-service-btn">
+                                <span>Inquire for Large Trees</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <div class="ls-item-separator"></div>
+
+                    <!-- SERVICE 04: LAWN & GREEN SPACES (REVERSED) -->
+                    <article class="ls-service-item ls-reversed reveal-up" id="ls-service-04">
+                        <div class="ls-service-media">
+                            <div class="ls-media-main-wrap" onclick="openLightbox('173.png', ['173.png', 'images/lawn-44.webp', '170.png', '171.png', '172.png'])">
+                                <img src="173.png" onerror="this.onerror=null; this.src='image copy 173.png';" alt="Lawn and Green Spaces" class="ls-media-main" loading="lazy">
+                                <span class="ls-media-zoom-hint">🔍 Expand View</span>
+                            </div>
+                            <div class="ls-media-supporting-wrap" onclick="openLightbox('images/lawn-44.webp', ['173.png', 'images/lawn-44.webp'])">
+                                <img src="images/lawn-44.webp" alt="Lawn Layout Detail" class="ls-media-supporting" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="ls-service-info">
+                            <div class="ls-service-header">
+                                <span class="ls-service-num">04</span>
+                                <span class="ls-service-icon">🌾</span>
+                            </div>
+                            <h3 class="ls-service-title">LAWN & GREEN SPACES</h3>
+                            <p class="ls-service-tagline">“Fresh lawns that give every landscape a sense of life.”</p>
+                            <p class="ls-service-desc">
+                                Create and develop attractive lawn areas with greenery that complements gardens, pathways and outdoor spaces. From natural turf laying to ground-cover borders that retain lush freshness year-round.
+                            </p>
+                            <div class="ls-service-tags">
+                                <span class="ls-tag">Natural Turf Grass</span>
+                                <span class="ls-tag">Lawn Leveling</span>
+                                <span class="ls-tag">Pathway Borders</span>
+                            </div>
+                            <a href="https://wa.me/919390599799?text=Hello%20Sri%20Akshaya%20Nursery,%20I%20am%20interested%20in%20Lawn%20and%20Green%20Spaces." target="_blank" class="ls-service-btn">
+                                <span>Get Lawn Solutions</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- QUOTE MOMENT 2 -->
+                    <div class="ls-quote-moment reveal-up">
+                        <div class="ls-quote-inner">
+                            <span class="ls-quote-leaf">🌿</span>
+                            <blockquote class="ls-quote-text">
+                                “Good landscaping is not only seen — it is experienced.”
+                            </blockquote>
+                            <span class="ls-quote-author">Sri Akshaya Nursery • Kadiyam</span>
+                        </div>
+                    </div>
+
+                    <!-- SERVICE 05: PLANT SUPPLY FOR LANDSCAPING -->
+                    <article class="ls-service-item reveal-up" id="ls-service-05">
+                        <div class="ls-service-media">
+                            <div class="ls-media-main-wrap" onclick="openLightbox('images/wall-garden-30.webp', ['images/wall-garden-30.webp', 'images/garden-42.webp', 'images/garden-43.webp'])">
+                                <img src="images/wall-garden-30.webp" alt="Plant Supply for Landscaping" class="ls-media-main" loading="lazy">
+                                <span class="ls-media-zoom-hint">🔍 Expand View</span>
+                            </div>
+                            <div class="ls-media-supporting-wrap" onclick="openLightbox('images/garden-42.webp', ['images/wall-garden-30.webp', 'images/garden-42.webp'])">
+                                <img src="images/garden-42.webp" alt="Nursery Stock Selection" class="ls-media-supporting" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="ls-service-info">
+                            <div class="ls-service-header">
+                                <span class="ls-service-num">05</span>
+                                <span class="ls-service-icon">🪴</span>
+                            </div>
+                            <h3 class="ls-service-title">PLANT SUPPLY FOR LANDSCAPING</h3>
+                            <p class="ls-service-tagline">“The right plants make the landscape complete.”</p>
+                            <p class="ls-service-desc">
+                                Provide a wide selection of ornamental, flowering, foliage, fruit and landscape plants according to project requirements. Cultivated in Kadiyam's rich delta soil for vigorous root health and effortless adaptation.
+                            </p>
+                            <div class="ls-service-tags">
+                                <span class="ls-tag">Direct From Nursery</span>
+                                <span class="ls-tag">Wholesale Supply</span>
+                                <span class="ls-tag">Acclimatized Plants</span>
+                            </div>
+                            <a href="https://wa.me/919390599799?text=Hello%20Sri%20Akshaya%20Nursery,%20I%20am%20interested%20in%20Bulk%20Plant%20Supply%20for%20Landscaping." target="_blank" class="ls-service-btn">
+                                <span>Request Bulk Supply</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <div class="ls-item-separator"></div>
+
+                    <!-- SERVICE 06: LANDSCAPE MAINTENANCE (REVERSED) -->
+                    <article class="ls-service-item ls-reversed reveal-up" id="ls-service-06">
+                        <div class="ls-service-media">
+                            <div class="ls-media-main-wrap" onclick="openLightbox('images/garden-38.webp', ['images/garden-38.webp', 'images/lawn-45.webp', 'images/garden-39.webp'])">
+                                <img src="images/garden-38.webp" alt="Landscape Maintenance" class="ls-media-main" loading="lazy">
+                                <span class="ls-media-zoom-hint">🔍 Expand View</span>
+                            </div>
+                            <div class="ls-media-supporting-wrap" onclick="openLightbox('images/lawn-45.webp', ['images/garden-38.webp', 'images/lawn-45.webp'])">
+                                <img src="images/lawn-45.webp" alt="Manicured Green Lawn" class="ls-media-supporting" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="ls-service-info">
+                            <div class="ls-service-header">
+                                <span class="ls-service-num">06</span>
+                                <span class="ls-service-icon">✨</span>
+                            </div>
+                            <h3 class="ls-service-title">LANDSCAPE MAINTENANCE</h3>
+                            <p class="ls-service-tagline">“Keeping every green space healthy and beautiful.”</p>
+                            <p class="ls-service-desc">
+                                Ongoing care and maintenance solutions to help landscapes remain fresh, healthy and visually appealing. Pruning, pest prevention, organic nutrition, and seasonal replanting tailored to local climate conditions.
+                            </p>
+                            <div class="ls-service-tags">
+                                <span class="ls-tag">Pruning & Trimming</span>
+                                <span class="ls-tag">Plant Nutrition</span>
+                                <span class="ls-tag">Seasonal Care</span>
+                            </div>
+                            <a href="https://wa.me/919390599799?text=Hello%20Sri%20Akshaya%20Nursery,%20I%20am%20interested%20in%20Landscape%20Maintenance." target="_blank" class="ls-service-btn">
+                                <span>Schedule Maintenance</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- QUOTE MOMENT 3 -->
+                    <div class="ls-quote-moment reveal-up">
+                        <div class="ls-quote-inner">
+                            <span class="ls-quote-leaf">🌱</span>
+                            <blockquote class="ls-quote-text">
+                                “Let your surroundings grow into something beautiful.”
+                            </blockquote>
+                            <span class="ls-quote-author">Sri Akshaya Nursery • Kadiyam</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 4. COMPREHENSIVE PROJECT ARCHIVE (ALL EXISTING LANDSCAPING IMAGES) -->
+            <div class="ls-archive-section reveal-up">
+                <div class="container">
+                    <div class="ls-archive-header">
+                        <span class="ls-intro-eyebrow">REAL NURSERY SITES</span>
+                        <h3 class="ls-archive-title">Our Landscaping Project Archive</h3>
+                        <p class="ls-archive-sub">Explore our real work across Wall Gardening, Garden Creations and Lush Lawns.</p>
+                    </div>
+
+                    <!-- Category grids for existing JS populator -->
+                    <div class="ls-archive-block">
+                        <h4 class="ls-archive-cat-title"><span>🌱</span> Wall Gardening Services</h4>
+                        <div class="service-grid" id="wallGardenGrid"></div>
+                    </div>
+
+                    <div class="ls-archive-block">
+                        <h4 class="ls-archive-cat-title"><span>🌿</span> Gardening Works & Creations</h4>
+                        <div class="service-grid" id="gardenGrid"></div>
+                    </div>
+
+                    <div class="ls-archive-block">
+                        <h4 class="ls-archive-cat-title"><span>🌾</span> Lawn Development & Maintenance</h4>
+                        <div class="service-grid" id="lawnGrid"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. FINAL LANDSCAPING CTA -->
+            <div class="ls-cta-section reveal-up">
+                <div class="container">
+                    <div class="ls-cta-box">
+                        <span class="ls-cta-leaf">🌿</span>
+                        <h2 class="ls-cta-heading">LET'S CREATE SOMETHING GREEN</h2>
+                        <blockquote class="ls-cta-quote">
+                            “Your outdoor space deserves more than decoration — it deserves a landscape that grows with you.”
+                        </blockquote>
+                        <div class="ls-cta-actions">
+                            <button class="ls-cta-btn" onclick="navigateTo('contact')">
+                                <span>DISCUSS YOUR LANDSCAPE</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                            <a href="https://wa.me/919390599799?text=Hi%20Sri%20Akshaya%20Nursery,%20I%20would%20like%20to%20discuss%20a%20landscaping%20project." target="_blank" class="ls-cta-btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp Consultation</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- GALLERY PAGE — PREMIUM BOTANICAL PHOTOGRAPHY -->
+    <section class="page" id="page-gallery">
+        <!-- 1. PREMIUM GALLERY HERO -->
+        <div class="gallery-hero" data-page="gallery">
+            <img loading="lazy" src="164.png" onerror="this.onerror=null; this.src='images/hero2.webp';" alt="Sri Akshaya Nursery Gallery Banner" class="gallery-hero-bg">
+            <div class="gallery-hero-overlay"></div>
+            <div class="gallery-hero-pattern"></div>
+            <div class="gallery-hero-content">
+                <span class="gallery-hero-eyebrow">SRI AKSHAYA NURSERY</span>
+                <h1 class="gallery-hero-title">OUR GREEN GALLERY</h1>
+                <p class="gallery-hero-quote">“A glimpse into the plants, landscapes and greenery we grow with care.”</p>
+                <div class="gallery-hero-line"></div>
+            </div>
+        </div>
+
+        <!-- 2. BOTANICAL PHOTO GALLERY -->
+        <div class="gallery-botanical-content">
+            <div class="container gallery-container">
+                <!-- Gallery Section Header -->
+                <div class="gallery-section-intro reveal-up">
+                    <span class="gallery-intro-eyebrow">PLANT PHOTOGRAPHY</span>
+                    <h2 class="gallery-intro-title">A Glimpse Into Our Green World</h2>
+                    <p class="gallery-intro-sub">Explore our collection of plants, trees and nursery greenery through photographs from Sri Akshaya Nursery.</p>
+                    
+                    <!-- Subtle Botanical Category Accents / Visual Identity Chips -->
+                    <div class="gallery-botanical-chips">
+                        <span class="gallery-chip"><span class="chip-leaf">🌿</span> Nursery Life</span>
+                        <span class="gallery-chip"><span class="chip-leaf">🌳</span> Trees &amp; Greenery</span>
+                        <span class="gallery-chip"><span class="chip-leaf">🪴</span> Plant Collection</span>
+                        <span class="gallery-chip"><span class="chip-leaf">🌸</span> Natural Beauty</span>
+                    </div>
+                </div>
+
+                <!-- Editorial Botanical Gallery Grid (176.png - 188.png) -->
+                <div class="botanical-gallery-grid" id="photosGrid">
+                    <!-- Item 1: 176.png (Medium) -->
+                    <div class="botanical-gallery-item item-medium stagger-item" data-index="0" data-src="176.png" data-title="Sculpted Ficus Bonsai Tree" data-category="🌿 Nursery Life" style="transition-delay: 50ms;">
+                        <div class="gallery-img-wrapper">
+                            <img loading="lazy" src="176.png" onerror="this.onerror=null; this.src='image copy 176.png';" alt="Sculpted Ficus Bonsai Tree" class="gallery-editorial-photo">
+                            <div class="gallery-item-overlay">
+                                <span class="gallery-item-tag">🌿 Nursery Life</span>
+                                <div class="gallery-item-center">
+                                    <span class="gallery-action-icon"><i class="fas fa-search-plus"></i></span>
+                                    <span class="gallery-action-text">View Photo</span>
+                                </div>
+                                <h4 class="gallery-item-title">Sculpted Ficus Bonsai Tree</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: 177.png (Tall) -->
+                    <div class="botanical-gallery-item item-tall stagger-item" data-index="1" data-src="177.png" data-title="Multi-Tier Cloud Tree Bonsai" data-category="🌳 Trees &amp; Greenery" style="transition-delay: 100ms;">
+                        <div class="gallery-img-wrapper">
+                            <img loading="lazy" src="177.png" onerror="this.onerror=null; this.src='image copy 177.png';" alt="Multi-Tier Cloud Tree Bonsai" class="gallery-editorial-photo">
+                            <div class="gallery-item-overlay">
+                                <span class="gallery-item-tag">🌳 Trees &amp; Greenery</span>
+                                <div class="gallery-item-center">
+                                    <span class="gallery-action-icon"><i class="fas fa-search-plus"></i></span>
+                                    <span class="gallery-action-text">View Photo</span>
+                                </div>
+                                <h4 class="gallery-item-title">Multi-Tier Cloud Tree Bonsai</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: 178.png (Medium) -->
+                    <div class="botanical-gallery-item item-medium stagger-item" data-index="2" data-src="178.png" data-title="Majestic Traveller's Palm" data-category="🪴 Plant Collection" style="transition-delay: 150ms;">
+                        <div class="gallery-img-wrapper">
+                            <img loading="lazy" src="178.png" onerror="this.onerror=null; this.src='image copy 178.png';" alt="Majestic Traveller's Palm" class="gallery-editorial-photo">
+                            <div class="gallery-item-overlay">
+                                <span class="gallery-item-tag">🪴 Plant Collection</span>
+                                <div class="gallery-item-center">
+                                    <span class="gallery-action-icon"><i class="fas fa-search-plus"></i></span>
+                                    <span class="gallery-action-text">View Photo</span>
+                                </div>
+                                <h4 class="gallery-item-title">Majestic Traveller's Palm</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: 185.png (Featured Masterpiece: Peacock Topiary) -->
+                    <div class="botanical-gallery-item item-featured-wide stagger-item" data-index="9" data-src="185.png" data-title="Living Bougainvillea Peacock Topiary" data-category="🌿 Nursery Life" style="transition-delay: 80ms;">
+                        <div class="gallery-img-wrapper">
+                            <img loading="lazy" src="185.png" onerror="this.onerror=null; this.src='image copy 185.png';" alt="Living Bougainvillea Peacock Topiary" class="gallery-editorial-photo">
+                            <div class="gallery-item-overlay">
+                                <span class="gallery-item-tag featured-tag">🌿 Nursery Life • Masterpiece</span>
+                                <div class="gallery-item-center">
+                                    <span class="gallery-action-icon"><i class="fas fa-search-plus"></i></span>
+                                    <span class="gallery-action-text">View Full Photo</span>
+                                </div>
+                                <h4 class="gallery-item-title">Living Bougainvillea Peacock Topiary</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5: 179.png (Portrait) -->
+                    <div class="botanical-gallery-item item-portrait stagger-item" data-index="3" data-src="179.png" data-title="Variegated Madagascar Almond Avenue" data-category="🌳 Trees &amp; Greenery" style="transition-delay: 180ms;">
+                        <div class="gallery-img-wrapper">
+                            <img loading="lazy" src="179.png" onerror="this.onerror=null; this.src='image copy 179.png';" alt="Variegated Madagascar Almond Avenue" class="gallery-editorial-photo">
+                            <div class="gallery-item-overlay">
+                                <span class="gallery-item-tag">🌳 Trees &amp; Greenery</span>
+                                <div class="gallery-item-center">
+                                    <span class="gallery-action-icon"><i class="fas fa-search-plus"></i></span>
+                                    <span class="gallery-action-text">View Photo</span>
+                                </div>
+                                <h4 class="gallery-item-title">Variegated Madagascar Almond Avenue</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 6: 180.png (Medium) -->
+                    <div class="botanical-gallery-item item-medium stagger-item" data-index="4" data-src="180.png" data-title="Blooming Pink Plumeria Tree" data-category="🌸 Natural Beauty" style="transition-delay: 120ms;">
+                        <div class="gallery-img-wrapper">
+                            <img loading="lazy" src="180.png" onerror="this.onerror=null; this.src='image copy 180.png';" alt="Blooming Pink Plumeria Tree" class="gallery-editorial-photo">
+                            <div class="gallery-item-overlay">
+                                <span class="gallery-item-tag">🌸 Natural Beauty</span>
+                                <div class="gallery-item-center">
+                                    <span class="gallery-action-icon"><i class="fas fa-search-plus"></i></span>
+                                    <span class="gallery-action-text">View Photo</span>
+                                </div>
+                                <h4 class="gallery-item-title">Blooming Pink Plumeria Tree</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 7: 181.png (Medium) -->
+                    <div class="botanical-gallery-item item-medium stagger-item" data-index="5" data-src="181.png" data-title="Cascading Orange Flame Climber" data-category="🌸 Natural Beauty" style="transition-delay: 160ms;">
+                        <div class="gallery-img-wrapper">
+                            <img loading="lazy" src="181.png" onerror="this.onerror=null; this.src='image copy 181.png';" alt="Cascading Orange Flame Climber" class="gallery-editorial-photo">
+                            <div class="gallery-item-overlay">
+                                <span class="gallery-item-tag">🌸 Natural Beauty</span>
+                                <div class="gallery-item-center">
+                                    <span class="gallery-action-icon"><i class="fas fa-search-plus"></i></span>
+                                    <span class="gallery-action-text">View Photo</span>
+                                </div>
+                                <h4 class="gallery-item-title">Cascading Orange Flame Climber</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 8: 182.png (Medium) -->
+                    <div class="botanical-gallery-item item-medium stagger-item" data-index="6" data-src="182.png" data-title="Bicolor Bougainvillea Bonsai" data-category="🪴 Plant Collection" style="transition-delay: 200ms;">
+                        <div class="gallery-img-wrapper">
+                            <img loading="lazy" src="182.png" onerror="this.onerror=null; this.src='image copy 182.png';" alt="Bicolor Bougainvillea Bonsai" class="gallery-editorial-photo">
+                            <div class="gallery-item-overlay">
+                                <span class="gallery-item-tag">🪴 Plant Collection</span>
+                                <div class="gallery-item-center">
+                                    <span class="gallery-action-icon"><i class="fas fa-search-plus"></i></span>
+                                    <span class="gallery-action-text">View Photo</span>
+                                </div>
+                                <h4 class="gallery-item-title">Bicolor Bougainvillea Bonsai</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 9: 183.png (Tall) -->
+                    <div class="botanical-gallery-item item-tall stagger-item" data-index="7" data-src="183.png" data-title="Lotus &amp; Water Lily Garden Pool" data-category="🌸 Natural Beauty" style="transition-delay: 140ms;">
+                        <div class="gallery-img-wrapper">
+                            <img loading="lazy" src="183.png" onerror="this.onerror=null; this.src='image copy 183.png';" alt="Lotus &amp; Water Lily Garden Pool" class="gallery-editorial-photo">
+                            <div class="gallery-item-overlay">
+                                <span class="gallery-item-tag">🌸 Natural Beauty</span>
+                                <div class="gallery-item-center">
+                                    <span class="gallery-action-icon"><i class="fas fa-search-plus"></i></span>
+                                    <span class="gallery-action-text">View Photo</span>
+                                </div>
+                                <h4 class="gallery-item-title">Lotus &amp; Water Lily Garden Pool</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 10: 184.png (Medium) -->
+                    <div class="botanical-gallery-item item-medium stagger-item" data-index="8" data-src="184.png" data-title="Vibrant Magenta Topiary Standard" data-category="🪴 Plant Collection" style="transition-delay: 180ms;">
+                        <div class="gallery-img-wrapper">
+                            <img loading="lazy" src="184.png" onerror="this.onerror=null; this.src='image copy 184.png';" alt="Vibrant Magenta Topiary Standard" class="gallery-editorial-photo">
+                            <div class="gallery-item-overlay">
+                                <span class="gallery-item-tag">🪴 Plant Collection</span>
+                                <div class="gallery-item-center">
+                                    <span class="gallery-action-icon"><i class="fas fa-search-plus"></i></span>
+                                    <span class="gallery-action-text">View Photo</span>
+                                </div>
+                                <h4 class="gallery-item-title">Vibrant Magenta Topiary Standard</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 11: 186.png (Medium) -->
+                    <div class="botanical-gallery-item item-medium stagger-item" data-index="10" data-src="186.png" data-title="Fresh Rambutan Fruit Cluster" data-category="🌿 Nursery Life" style="transition-delay: 220ms;">
+                        <div class="gallery-img-wrapper">
+                            <img loading="lazy" src="186.png" onerror="this.onerror=null; this.src='image copy 186.png';" alt="Fresh Rambutan Fruit Cluster" class="gallery-editorial-photo">
+                            <div class="gallery-item-overlay">
+                                <span class="gallery-item-tag">🌿 Nursery Life</span>
+                                <div class="gallery-item-center">
+                                    <span class="gallery-action-icon"><i class="fas fa-search-plus"></i></span>
+                                    <span class="gallery-action-text">View Photo</span>
+                                </div>
+                                <h4 class="gallery-item-title">Fresh Rambutan Fruit Cluster</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 12: 187.png (Medium) -->
+                    <div class="botanical-gallery-item item-medium stagger-item" data-index="11" data-src="187.png" data-title="Golden Champaca Fragrant Bloom" data-category="🌸 Natural Beauty" style="transition-delay: 160ms;">
+                        <div class="gallery-img-wrapper">
+                            <img loading="lazy" src="187.png" onerror="this.onerror=null; this.src='image copy 187.png';" alt="Golden Champaca Fragrant Bloom" class="gallery-editorial-photo">
+                            <div class="gallery-item-overlay">
+                                <span class="gallery-item-tag">🌸 Natural Beauty</span>
+                                <div class="gallery-item-center">
+                                    <span class="gallery-action-icon"><i class="fas fa-search-plus"></i></span>
+                                    <span class="gallery-action-text">View Photo</span>
+                                </div>
+                                <h4 class="gallery-item-title">Golden Champaca Fragrant Bloom</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 13: 188.png (Grand Ancient Olive Feature) -->
+                    <div class="botanical-gallery-item item-featured-large stagger-item" data-index="12" data-src="188.png" data-title="Ancient Specimen Olive Tree" data-category="🌳 Trees &amp; Greenery" style="transition-delay: 200ms;">
+                        <div class="gallery-img-wrapper">
+                            <img loading="lazy" src="188.png" onerror="this.onerror=null; this.src='image copy 188.png';" alt="Ancient Specimen Olive Tree" class="gallery-editorial-photo">
+                            <div class="gallery-item-overlay">
+                                <span class="gallery-item-tag featured-tag">🌳 Trees &amp; Greenery • Exotic Specimen</span>
+                                <div class="gallery-item-center">
+                                    <span class="gallery-action-icon"><i class="fas fa-search-plus"></i></span>
+                                    <span class="gallery-action-text">View Full Photo</span>
+                                </div>
+                                <h4 class="gallery-item-title">Ancient Specimen Olive Tree</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2B. LOADING PLANTS (NURSERY DISPATCH) -->
+                <div class="gallery-loadings-section reveal-up" id="gallery-loadings">
+                    <div class="gallery-section-intro reveal-up">
+                        <span class="gallery-intro-eyebrow">DAILY DISPATCH &amp; SUPPLY</span>
+                        <h2 class="gallery-intro-title">Loading Plants</h2>
+                        <p class="gallery-intro-sub">Daily dispatches and plant loading operations from Sri Akshaya Nursery, securely supplying greenery across Andhra Pradesh, Telangana, and pan-India.</p>
+                        <div class="gallery-botanical-chips">
+                            <span class="gallery-chip"><span class="chip-leaf">🚛</span> Daily Dispatches</span>
+                            <span class="gallery-chip"><span class="chip-leaf">🌿</span> Pan-India Supply</span>
+                            <span class="gallery-chip"><span class="chip-leaf">📦</span> Safe Transportation</span>
+                        </div>
+                    </div>
+                    <div class="loadings-gallery-grid" id="loadingsGrid">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <!-- 3. GALLERY CLOSING CTA -->
+                <div class="gallery-closing-cta reveal-up">
+                    <div class="gallery-cta-inner">
+                        <div class="gallery-cta-badge">🌿 SRI AKSHAYA NURSERY</div>
+                        <h3 class="gallery-cta-title">SEEN SOMETHING YOU LIKE?</h3>
+                        <p class="gallery-cta-text">Discover our plant collection or talk to us about your next green project.</p>
+                        <div class="gallery-cta-buttons">
+                            <a href="#varieties" class="gallery-btn-primary" onclick="navigateTo('varieties')">
+                                <i class="fas fa-leaf"></i>
+                                <span>EXPLORE PLANTS</span>
+                            </a>
+                            <a href="#contact" class="gallery-btn-secondary" onclick="navigateTo('contact')">
+                                <i class="fas fa-envelope"></i>
+                                <span>CONTACT US</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT PAGE — PREMIUM BOTANICAL REDESIGN -->
+    <section class="page" id="page-contact">
+        <!-- 1. CONTACT HERO -->
+        <div class="cn-hero" data-page="contact">
+            <img loading="lazy" src="164.png" onerror="this.onerror=null; this.src='images/hero2.webp';" alt="Contact Sri Akshaya Nursery" class="cn-hero-bg">
+            <div class="cn-hero-overlay"></div>
+            <div class="cn-hero-pattern"></div>
+            <div class="cn-hero-content">
+                <span class="cn-hero-eyebrow">LET'S GROW TOGETHER</span>
+                <h1 class="cn-hero-title" id="contactHeroTitle" aria-label="CONTACT SRI AKSHAYA NURSERY">
+                    <span class="cn-char" style="--char-i: 0;">C</span><span class="cn-char" style="--char-i: 1;">O</span><span class="cn-char" style="--char-i: 2;">N</span><span class="cn-char" style="--char-i: 3;">T</span><span class="cn-char" style="--char-i: 4;">A</span><span class="cn-char" style="--char-i: 5;">C</span><span class="cn-char" style="--char-i: 6;">T</span><span class="cn-char cn-space" style="--char-i: 7;">&nbsp;</span><span class="cn-char" style="--char-i: 8;">S</span><span class="cn-char" style="--char-i: 9;">R</span><span class="cn-char" style="--char-i: 10;">I</span><span class="cn-char cn-space" style="--char-i: 11;">&nbsp;</span><span class="cn-char" style="--char-i: 12;">A</span><span class="cn-char" style="--char-i: 13;">K</span><span class="cn-char" style="--char-i: 14;">S</span><span class="cn-char" style="--char-i: 15;">H</span><span class="cn-char" style="--char-i: 16;">A</span><span class="cn-char" style="--char-i: 17;">Y</span><span class="cn-char" style="--char-i: 18;">A</span><span class="cn-char cn-space" style="--char-i: 19;">&nbsp;</span><span class="cn-char" style="--char-i: 20;">N</span><span class="cn-char" style="--char-i: 21;">U</span><span class="cn-char" style="--char-i: 22;">R</span><span class="cn-char" style="--char-i: 23;">S</span><span class="cn-char" style="--char-i: 24;">E</span><span class="cn-char" style="--char-i: 25;">R</span><span class="cn-char" style="--char-i: 26;">Y</span>
+                </h1>
+                <p class="cn-hero-sub">Plants, landscapes and green solutions — we're here to help you find the right choice for your space.</p>
+                <div class="cn-hero-divider"></div>
+            </div>
+        </div>
+
+        <div class="cn-page-body">
+            <!-- 2. CONTACT CONTENT — PREMIUM TWO-COLUMN DESIGN -->
+            <div class="cn-main-section">
+                <div class="container">
+                    <div class="cn-two-col-grid">
+                        
+                        <!-- LEFT SIDE — NURSERY CONTACT -->
+                        <div class="cn-left-col reveal-left">
+                            <span class="cn-left-eyebrow">SRI AKSHAYA NURSERY</span>
+                            <h2 class="cn-left-heading">Come Visit Our Green World</h2>
+                            <p class="cn-left-text">
+                                Looking for quality plants, landscaping solutions or greenery for your next project? Connect with Sri Akshaya Nursery and let our experience help you choose the right plants for your space.
+                            </p>
+                            
+                            <div class="cn-quote-card">
+                                <span class="cn-quote-leaf">🌿</span>
+                                <blockquote class="cn-quote-text">
+                                    “Good plants grow spaces. Good care makes them thrive.”
+                                </blockquote>
+                            </div>
+
+                            <div class="cn-info-list">
+                                <div class="cn-info-item">
+                                    <div class="cn-info-icon-wrap">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="cn-info-content">
+                                        <span class="cn-info-label">VISIT US</span>
+                                        <p class="cn-info-val">Kadiapulanka, Kadiyam, Andhra Pradesh</p>
+                                    </div>
+                                </div>
+
+                                <div class="cn-info-item">
+                                    <div class="cn-info-icon-wrap">
+                                        <i class="fas fa-seedling"></i>
+                                    </div>
+                                    <div class="cn-info-content">
+                                        <span class="cn-info-label">OUR SERVICES</span>
+                                        <p class="cn-info-val">All Kind of Plant Supply &amp; Landscaping Works</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- RIGHT SIDE — CONTACT DETAILS CARD -->
+                        <div class="cn-right-col reveal-right">
+                            <div class="cn-details-card">
+                                <div class="cn-card-header">
+                                    <span class="cn-card-eyebrow">DIRECT REACH</span>
+                                    <h3 class="cn-card-title">GET IN TOUCH</h3>
+                                </div>
+
+                                <div class="cn-details-list">
+                                    <!-- Prop -->
+                                    <div class="cn-detail-row">
+                                        <div class="cn-detail-icon"><i class="far fa-user"></i></div>
+                                        <div class="cn-detail-meta">
+                                            <span class="cn-detail-label">PROP.</span>
+                                            <p class="cn-detail-value">Badri &amp; B.N.V.V.S Swamy</p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Phone Numbers -->
+                                    <div class="cn-detail-row">
+                                        <div class="cn-detail-icon"><i class="fas fa-phone-alt"></i></div>
+                                        <div class="cn-detail-meta">
+                                            <span class="cn-detail-label">CALL US</span>
+                                            <div class="cn-detail-phone-group">
+                                                <a href="tel:9618676266" class="cn-contact-link">9618676266</a>
+                                                <span class="cn-phone-sep">•</span>
+                                                <a href="tel:9581084942" class="cn-contact-link">9581084942</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Email -->
+                                    <div class="cn-detail-row">
+                                        <div class="cn-detail-icon"><i class="far fa-envelope"></i></div>
+                                        <div class="cn-detail-meta">
+                                            <span class="cn-detail-label">EMAIL</span>
+                                            <a href="mailto:sriakshayanursery20@gmail.com" class="cn-contact-link">sriakshayanursery20@gmail.com</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Location -->
+                                    <div class="cn-detail-row">
+                                        <div class="cn-detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                        <div class="cn-detail-meta">
+                                            <span class="cn-detail-label">LOCATION</span>
+                                            <p class="cn-detail-value">Kadiapulanka, Kadiyam, Andhra Pradesh</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- QUICK CONTACT ACTIONS -->
+                                <div class="cn-quick-actions">
+                                    <a href="tel:9581084942" class="cn-action-btn cn-action-call">
+                                        <i class="fas fa-phone-alt"></i>
+                                        <span>CALL NOW</span>
+                                    </a>
+                                    <a href="https://wa.me/919581084942" target="_blank" rel="noopener noreferrer" class="cn-action-btn cn-action-whatsapp">
+                                        <i class="fab fa-whatsapp"></i>
+                                        <span>WHATSAPP</span>
+                                    </a>
+                                    <a href="mailto:sriakshayanursery20@gmail.com" class="cn-action-btn cn-action-email">
+                                        <i class="far fa-envelope"></i>
+                                        <span>EMAIL US</span>
+                                    </a>
+                                </div>
+
+                                <!-- SOCIAL MEDIA -->
+                                <div class="cn-social-wrap">
+                                    <span class="cn-social-label">Follow Our Green World:</span>
+                                    <div class="cn-social-icons">
+                                        <a href="https://www.instagram.com/sriakshayanursery?stkn=aG9ocmJoZHl4Zms=" target="_blank" rel="noopener noreferrer" class="cn-social-icon" aria-label="Instagram">
+                                             <i class="fab fa-instagram"></i>
+                                        </a>
+                                        <a href="https://www.facebook.com/share/1JGCD7QtLg/" target="_blank" rel="noopener noreferrer" class="cn-social-icon" aria-label="Facebook">
+                                             <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. PREMIUM NURSERY VISUAL SECTION -->
+            <div class="cn-botanical-strip reveal-up">
+                <div class="container">
+                    <div class="cn-botanical-strip-inner">
+                        <div class="cn-strip-items">
+                            <div class="cn-strip-item">
+                                <span class="cn-strip-symbol">🌱</span>
+                                <span class="cn-strip-name">PLANT SUPPLY</span>
+                            </div>
+                            <span class="cn-strip-dot">•</span>
+                            <div class="cn-strip-item">
+                                <span class="cn-strip-symbol">🌿</span>
+                                <span class="cn-strip-name">LANDSCAPING</span>
+                            </div>
+                            <span class="cn-strip-dot">•</span>
+                            <div class="cn-strip-item">
+                                <span class="cn-strip-symbol">🌳</span>
+                                <span class="cn-strip-name">TREES &amp; GREENERY</span>
+                            </div>
+                        </div>
+                        <p class="cn-strip-tagline">Quality plants. Thoughtful landscaping. Trusted nursery experience.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. GOOGLE MAP / LOCATION AREA -->
+            <div class="cn-map-section reveal-up">
+                <div class="container">
+                    <div class="cn-map-card">
+                        <div class="cn-map-header">
+                            <div class="cn-map-header-left">
+                                <span class="cn-map-eyebrow">FIND US IN KADIYAM</span>
+                                <h3 class="cn-map-title">Kadiapulanka, Kadiyam, Andhra Pradesh</h3>
+                            </div>
+                            <a href="https://maps.google.com/?q=Sri+Akshaya+Nursery+Kadiapulanka+Kadiyam+Andhra+Pradesh" target="_blank" rel="noopener" class="cn-map-btn">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <span>VIEW ON GOOGLE MAPS</span>
+                            </a>
+                        </div>
+                        <div class="cn-map-frame-wrap">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3816.8!2d81.83!3d16.92!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37a1ab4e0c0b5f%3A0x1!2sSri+Aakanksha+Nursery+Kadiyam!5e0!3m2!1sen!2sin!4v1" 
+                                width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade" title="Sri Akshaya Nursery – Kadiyam"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. CONTACT CTA -->
+            <div class="cn-cta-section reveal-up">
+                <div class="container">
+                    <div class="cn-cta-box">
+                        <span class="cn-cta-leaf">🌿</span>
+                        <h2 class="cn-cta-heading">READY TO BRING MORE GREEN INTO YOUR SPACE?</h2>
+                        <p class="cn-cta-sub">Tell us what you're looking for — plants, trees, landscaping or a complete green transformation.</p>
+                        <div class="cn-cta-actions">
+                            <a href="tel:9618676266" class="cn-cta-btn cn-cta-call">
+                                <i class="fas fa-phone-alt"></i>
+                                <span>CALL US</span>
+                            </a>
+                            <a href="https://maps.google.com/?q=Sri+Akshaya+Nursery+Kadiapulanka+Kadiyam+Andhra+Pradesh" target="_blank" rel="noopener" class="cn-cta-btn cn-cta-directions">
+                                <i class="fas fa-directions"></i>
+                                <span>GET DIRECTIONS</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,40 C360,100 720,0 1080,60 C1260,90 1380,40 1440,40 L1440,120 L0,120 Z" fill="#1a3c1a"/>
+            </svg>
+        </div>
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="#home" onclick="navigateTo('home')">
+                            <img loading="lazy" src="image copy 175.png" alt="Sri Akshaya Nursery" class="footer-logo">
+                        </a>
+                        <a href="#home" onclick="navigateTo('home')">
+                            <h3>Sri Akshaya Nursery</h3>
+                        </a>
+                        <p>Premium Plants | Landscaping Experts | 25+ Years of Excellence in Green Living</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home" onclick="navigateTo('home')">Home</a></li>
+                            <li><a href="#about" onclick="navigateTo('about')">About Us</a></li>
+                            <li><a href="#varieties" onclick="navigateTo('varieties')">Plants Varieties</a></li>
+                            <li><a href="#landscaping" onclick="navigateTo('landscaping')">Landscaping Services</a></li>
+                            <li><a href="#gallery" onclick="navigateTo('gallery')">Gallery</a></li>
+                            <li><a href="#contact" onclick="navigateTo('contact')">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-varieties">
+                        <h4>Plant Varieties</h4>
+                        <ul>
+                            <li><a href="#varieties" onclick="navigateTo('varieties','indoor')">🪴 Indoor Plants</a></li>
+                            <li><a href="#varieties" onclick="navigateTo('varieties','outdoor')">🌳 Outdoor Plants</a></li>
+                            <li><a href="#varieties" onclick="navigateTo('varieties','flowering')">🌸 Flowering Plants</a></li>
+                            <li><a href="#varieties" onclick="navigateTo('varieties','fruit')">🍊 Fruit Plants</a></li>
+                            <li><a href="#varieties" onclick="navigateTo('varieties','ficus')">🌿 Ficus</a></li>
+                            <li><a href="#varieties" onclick="navigateTo('varieties','olive')">🍈 Olive</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>Contact Info</h4>
+                        <p><i class="fas fa-phone-alt"></i> <a href="tel:9581084942">9581084942</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:sriakshayanursery20@gmail.com">sriakshayanursery20@gmail.com</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> Kadiyam, Andhra Pradesh</p>
+                        <div class="footer-social">
+                            <a href="https://www.instagram.com/sriakshayanursery?stkn=aG9ocmJoZHl4Zms=" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/share/1JGCD7QtLg/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sri Akshaya Nursery. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ============ FLOATING BUTTONS ============ -->
+    <div class="floating-buttons">
+        <a href="tel:9581084942" class="float-btn float-call" aria-label="Call Us"><i class="fas fa-phone-alt"></i></a>
+        <a href="https://wa.me/919581084942" target="_blank" rel="noopener noreferrer" class="float-btn float-whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/sriakshayanursery?stkn=aG9ocmJoZHl4Zms=" target="_blank" rel="noopener noreferrer" class="float-btn float-instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <!-- ============ LIGHTBOX ============ -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close Lightbox">&times;</button>
+        <button class="lightbox-prev" onclick="lightboxNav(-1)" aria-label="Previous Image"><i class="fas fa-chevron-left"></i></button>
+        <button class="lightbox-next" onclick="lightboxNav(1)" aria-label="Next Image"><i class="fas fa-chevron-right"></i></button>
+        <div class="lightbox-content">
+            <img src="" alt="Full view" id="lightboxImg">
+            <div class="lightbox-meta" id="lightboxMeta">
+                <span class="lightbox-caption" id="lightboxCaption"></span>
+                <span class="lightbox-counter" id="lightboxCounter"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ VIDEO MODAL ============ -->
+    <div class="video-modal" id="videoModal">
+        <button class="lightbox-close" onclick="closeVideoModal()">&times;</button>
+        <div class="video-modal-content">
+            <video id="modalVideo" controls></video>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
