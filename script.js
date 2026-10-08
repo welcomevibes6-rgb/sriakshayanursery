@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     populatePlantsGrid();
     populateLandscapingGrids();
     populateGalleryGrids();
+    initHomeFruitShowcase();
     initGalleryTabs();
     initLandscapingAnimation();
     initContactAnimation();
@@ -263,25 +264,73 @@ function initScrollReveal() {
 }
 
 /* -------- DATA SETS IDEALIZATION -------- */
-// Simulated data based on user instructions
+
+// Comprehensive Verified Fruit Plants Collection (189 - 264 + catalog)
+const verifiedFruitPlants = [
+    { id: 'fru-247', src: '247.png', name: 'Thailand Mango', variety: 'Exotic Mango', category: 'fruit' },
+    { id: 'fru-246', src: '246.png', name: 'Himayat Mango', variety: 'Royal Heritage', category: 'fruit' },
+    { id: 'fru-248', src: '248.png', name: 'Thailand Mango (All-Season)', variety: 'Grafted Sapling', category: 'fruit' },
+    { id: 'fru-250', src: '250.png', name: 'Danimma / Pomegranate', variety: 'Bhagwa Red Selection', category: 'fruit' },
+    { id: 'fru-252', src: '252.png', name: 'Jama / Guava', variety: 'High-Yield Guava', category: 'fruit' },
+    { id: 'fru-263', src: '263.png', name: 'Miyazaki Mango', variety: 'Egg of the Sun', category: 'fruit' },
+    { id: 'fru-264', src: '264.png', name: 'Alphonso Mango', variety: 'Ratnagiri Hapus', category: 'fruit' },
+    { id: 'fru-189', src: '189.png', name: '4 Season Longan', variety: 'Dragon Eye Fruit', category: 'fruit' },
+    { id: 'fru-191', src: '191.png', name: 'Avocado', variety: 'Butter Fruit', category: 'fruit' },
+    { id: 'fru-192', src: '192.png', name: 'Abiu Fruit', variety: 'Exotic Tropical Delicacy', category: 'fruit' },
+    { id: 'fru-190', src: '190.png', name: 'Mamey Sapote', variety: 'Exotic Sapote', category: 'fruit' },
+    { id: 'fru-194', src: '194.png', name: 'Black Jamun', variety: 'Big Berry Naval Pazham', category: 'fruit' },
+    { id: 'fru-195', src: '195.png', name: 'Almond / Badam', variety: 'Nut Tree Cultivar', category: 'fruit' },
+    { id: 'fru-196', src: '196.png', name: 'Exotic Purple Mango', variety: 'Blush Mango', category: 'fruit' },
+    { id: 'fru-197', src: '197.png', name: 'Apricot / Peach', variety: 'Temperate Fruit Selection', category: 'fruit' },
+    { id: 'fru-198', src: '198.png', name: 'Hass Avocado', variety: 'Grafted Butter Fruit', category: 'fruit' },
+    { id: 'fru-199', src: '199.png', name: 'Sapota / Chiku', variety: 'Cricket Ball Variety', category: 'fruit' },
+    { id: 'fru-200', src: '200.png', name: 'Banganapalli Mango', variety: 'Benishan King', category: 'fruit' },
+    { id: 'fru-201', src: '201.png', name: 'Seethaphal / Custard Apple', variety: 'Sugar Apple Cultivar', category: 'fruit' },
+    { id: 'fru-202', src: '202.png', name: 'Bhagwa Pomegranate', variety: 'Ruby Red Arils', category: 'fruit' },
+    { id: 'fru-203', src: '203.png', name: 'Purple Mango', variety: 'Rare Exotic Specimen', category: 'fruit' },
+    { id: 'fru-204', src: '204.png', name: 'Mahachanok / Banana Mango', variety: 'Rainbow Mango', category: 'fruit' },
+    { id: 'fru-205', src: '205.png', name: 'Sweet Mango', variety: 'Aromatic Table Fruit', category: 'fruit' },
+    { id: 'fru-206', src: '206.png', name: 'Golden Alphonso Mango', variety: 'Hapus Cultivar', category: 'fruit' },
+    { id: 'fru-210', src: '210.png', name: 'Ruby Blush Mango', variety: 'Exotic Hybrid', category: 'fruit' },
+    { id: 'fru-215', src: '215.png', name: 'Australian Purple Mango', variety: 'Specimen Mango', category: 'fruit' },
+    { id: 'fru-220', src: '220.png', name: 'Mamey Sapote (Magana)', variety: 'Red-Flesh Sapote', category: 'fruit' },
+    { id: 'fru-225', src: '225.png', name: 'Kagzi Lime / Lemon', variety: 'High-Yield Lemon', category: 'fruit' },
+    { id: 'fru-230', src: '230.png', name: 'Longan Fruit Clusters', variety: 'All-Season Longan', category: 'fruit' },
+    { id: 'fru-235', src: '235.png', name: 'Jamun / Blackberry', variety: 'Syzygium cumini', category: 'fruit' },
+    { id: 'fru-245', src: '245.png', name: 'Punasa Mango (All-Season)', variety: 'Year-Round Bearer', category: 'fruit' },
+    { id: 'fru-249', src: '249.png', name: 'Jama / Guava Saplings', variety: 'Field Nursery Stock', category: 'fruit' },
+    { id: 'fru-251', src: '251.png', name: 'Guava Plant (Fruit-Bearing)', variety: 'Grafted Guava', category: 'fruit' },
+    { id: 'fru-253', src: '253.png', name: 'Miyazaki Mango Saplings', variety: 'Authentic Variety', category: 'fruit' },
+    { id: 'fru-254', src: '254.png', name: 'Taiwan Guava (Jama)', variety: 'Crisp Jumbo Fruit', category: 'fruit' },
+    { id: 'fru-255', src: '255.png', name: 'Panasa / Jackfruit Saplings', variety: 'All-Season Jackfruit', category: 'fruit' },
+    { id: 'fru-256', src: '256.png', name: 'Grafted Mango Plant', variety: 'Acclimatized Rootstock', category: 'fruit' },
+    { id: 'fru-257', src: '257.png', name: 'Jackfruit Saplings', variety: 'High-Yield Jackfruit', category: 'fruit' },
+    { id: 'fru-258', src: '258.png', name: 'Ambarella / Hog Plum', variety: 'Container Fruit Tree', category: 'fruit' },
+    { id: 'fru-259', src: '259.png', name: 'Ruby Red Guava (Lal Jamun)', variety: 'Pink Flesh Guava', category: 'fruit' },
+    { id: 'fru-260', src: '260.png', name: 'Guava Plant Saplings', variety: 'Field Nursery Rows', category: 'fruit' },
+    { id: 'fru-261', src: '261.png', name: 'Taiwan Guava Plant', variety: 'Commercial Grade', category: 'fruit' },
+    { id: 'fru-262', src: '262.png', name: 'Katimon Mango', variety: 'All-Time Sweet Mango', category: 'fruit' }
+];
 
 // Varieties
 const plantsData = [
+    // Verified Real Fruit Plants First
+    ...verifiedFruitPlants,
     // Outdoor (47-75, 113-117)
-    ...Array.from({length: 29}, (_, i) => ({ id: `out${i+1}`, src: `images/outdoor-${47+i}.webp`, category: 'outdoor' })),
-    ...Array.from({length: 5}, (_, i) => ({ id: `out${i+30}`, src: `images/outdoor-${113+i}.webp`, category: 'outdoor' })),
+    ...Array.from({length: 29}, (_, i) => ({ id: `out${i+1}`, src: `images/outdoor-${47+i}.webp`, name: `Outdoor Plant #${i+1}`, category: 'outdoor' })),
+    ...Array.from({length: 5}, (_, i) => ({ id: `out${i+30}`, src: `images/outdoor-${113+i}.webp`, name: `Outdoor Specimen #${i+30}`, category: 'outdoor' })),
     // Indoor (132-136)
-    ...Array.from({length: 5}, (_, i) => ({ id: `ind${i+1}`, src: `images/indoor-${132+i}.webp`, category: 'indoor' })),
+    ...Array.from({length: 5}, (_, i) => ({ id: `ind${i+1}`, src: `images/indoor-${132+i}.webp`, name: `Indoor Plant #${i+1}`, category: 'indoor' })),
     // Flowering (102-112, 118-131, 97-101)
-    ...Array.from({length: 11}, (_, i) => ({ id: `flo${i+1}`, src: `images/flowering-${102+i}.webp`, category: 'flowering' })),
-    ...Array.from({length: 14}, (_, i) => ({ id: `flo${i+12}`, src: `images/flowering-${118+i}.webp`, category: 'flowering' })),
-    ...Array.from({length: 5}, (_, i) => ({ id: `flo${i+26}`, src: `images/flowering-${97+i}.webp`, category: 'flowering' })),
-    // Fruit (76-94)
-    ...Array.from({length: 19}, (_, i) => ({ id: `fru${i+1}`, src: `images/fruit-${76+i}.webp`, category: 'fruit' })),
+    ...Array.from({length: 11}, (_, i) => ({ id: `flo${i+1}`, src: `images/flowering-${102+i}.webp`, name: `Flowering Plant #${i+1}`, category: 'flowering' })),
+    ...Array.from({length: 14}, (_, i) => ({ id: `flo${i+12}`, src: `images/flowering-${118+i}.webp`, name: `Flowering Variety #${i+12}`, category: 'flowering' })),
+    ...Array.from({length: 5}, (_, i) => ({ id: `flo${i+26}`, src: `images/flowering-${97+i}.webp`, name: `Blossom Plant #${i+26}`, category: 'flowering' })),
+    // Catalog Fruit (76-94)
+    ...Array.from({length: 19}, (_, i) => ({ id: `fru-cat-${i+1}`, src: `images/fruit-${76+i}.webp`, name: `Fruit Plant #${i+1}`, category: 'fruit' })),
     // Ficus (137-145)
-    ...Array.from({length: 9}, (_, i) => ({ id: `fic${i+1}`, src: `images/ficus-${137+i}.webp`, category: 'ficus' })),
+    ...Array.from({length: 9}, (_, i) => ({ id: `fic${i+1}`, src: `images/ficus-${137+i}.webp`, name: `Ficus Tree #${i+1}`, category: 'ficus' })),
     // Olive (146-149)
-    ...Array.from({length: 4}, (_, i) => ({ id: `oli${i+1}`, src: `images/olive-${146+i}.webp`, category: 'olive' }))
+    ...Array.from({length: 4}, (_, i) => ({ id: `oli${i+1}`, src: `images/olive-${146+i}.webp`, name: `Specimen Olive #${i+1}`, category: 'olive' }))
 ];
 
 // Landscaping
@@ -289,13 +338,13 @@ const wallGardenData = Array.from({length: 3}, (_, i) => `images/wall-garden-${3
 const gardenData = ['images/garden-29.webp', ...Array.from({length: 11}, (_, i) => `images/garden-${33+i}.webp`), 'images/garden-96.webp'];
 const lawnData = Array.from({length: 3}, (_, i) => `images/lawn-${44+i}.webp`);
 
-// Gallery Photos (Approved 176.png - 188.png)
+// Gallery Photos (Updated with 236.png - 244.png)
 const galleryPhotos = [
-    '176.png', '177.png', '178.png', '179.png', '180.png',
-    '181.png', '182.png', '183.png', '184.png', '185.png',
-    '186.png', '187.png', '188.png'
+    '236.png', '237.png', '238.png', '239.png', '240.png',
+    '241.png', '242.png', '243.png', '244.png'
 ];
 const galleryLoadings = ['images/loading-0.webp', 'images/loading-1.webp', ...Array.from({length: 11}, (_, i) => `images/loading-${2+i}.webp`), 'images/loading-24.webp'];
+
 
 /* -------- VARIETIES -------- */
 function initPlantsFilter() {
@@ -313,6 +362,12 @@ function initPlantsFilter() {
     });
 }
 
+function getGalleryImagesList(container) {
+    if (!container) return [];
+    const imgs = container.querySelectorAll('.varieties-card img, .fruit-card img, .botanical-gallery-item img, .loading-card img');
+    return Array.from(imgs).map(img => img.getAttribute('data-src') || img.src).filter(Boolean);
+}
+
 function populatePlantsGrid() {
     const grid = document.getElementById('plantsGrid');
     if (!grid) return;
@@ -321,20 +376,21 @@ function populatePlantsGrid() {
     
     // initially show sample or all
     let toShow = plantsData;
-    // to prevent freezing, limit initial load to 40 items if 'all'
-    if (toShow.length > 40) toShow = toShow.slice(0, 40);
+    // to prevent freezing, limit initial load to 50 items if 'all'
+    if (toShow.length > 50) toShow = toShow.slice(0, 50);
     
     renderPlantCards(grid, toShow);
 }
 
 function filterPlantsGrid(category) {
     const grid = document.getElementById('plantsGrid');
+    if (!grid) return;
     grid.innerHTML = '';
     
     let filtered = category === 'all' ? plantsData : plantsData.filter(p => p.category === category);
     
-    // limit if too many to keep UI smooth
-    if (category === 'all' && filtered.length > 40) filtered = filtered.slice(0, 40);
+    // limit if all to keep UI smooth
+    if (category === 'all' && filtered.length > 50) filtered = filtered.slice(0, 50);
     
     renderPlantCards(grid, filtered);
 }
@@ -354,25 +410,41 @@ function renderPlantCards(container, data) {
         card.className = 'varieties-card stagger-item';
         card.style.transitionDelay = `${(index % 12) * 50}ms`;
         const catName = categoryNames[plant.category] || plant.category;
+        const displayName = plant.name || catName;
+        const subtitle = plant.variety ? `<div class="varieties-card-sub"><span class="sub-leaf">🌿</span> ${plant.variety}</div>` : '';
+        
         card.innerHTML = `
             <div class="varieties-card-img-wrap">
-                <img src="${plant.src}" alt="${catName}" loading="lazy" onerror="this.onerror=null; this.closest('.varieties-card').style.display='none';">
+                <img src="${plant.src}" alt="${displayName}" loading="lazy" onerror="if(!this.dataset.fallbackTried){this.dataset.fallbackTried='true'; if(this.src.indexOf('image copy') === -1 && this.src.indexOf('/') === -1) { this.src='image copy ' + this.src; return; } } this.closest('.varieties-card').style.display='none';">
                 <div class="varieties-card-overlay">
-                    <span class="varieties-card-zoom">🔍</span>
+                    <span class="varieties-card-zoom"><i class="fas fa-search-plus"></i></span>
                 </div>
             </div>
             <div class="varieties-card-body">
                 <span class="varieties-card-cat">${catName}</span>
-                <a href="https://wa.me/919390599799?text=Hi%2C%20I%20am%20interested%20in%20this%20${encodeURIComponent(catName)}%20from%20Sri%20Akshaya%20Nursery." target="_blank" class="varieties-card-quote" onclick="event.stopPropagation();">Get Quote</a>
+                <h4 class="varieties-card-title">${displayName}</h4>
+                ${subtitle}
+                <a href="https://wa.me/919581084942?text=Hi%2C%20I%20am%20interested%20in%20${encodeURIComponent(displayName)}%20(${encodeURIComponent(catName)})%20from%20Sri%20Akshaya%20Nursery." target="_blank" rel="noopener noreferrer" class="varieties-card-quote" onclick="event.stopPropagation();">
+                    <i class="fab fa-whatsapp"></i> Get Quote
+                </a>
             </div>`;
         
-        card.addEventListener('click', () => openLightbox(plant.src, getGalleryImagesList(container)));
+        // Fix plant card click functionality to open lightbox reliably
+        card.addEventListener('click', () => {
+            const itemsList = data.map(item => ({
+                src: item.src,
+                title: item.name || categoryNames[item.category] || 'Sri Akshaya Nursery Plant',
+                category: categoryNames[item.category] || '🪴 Plants',
+                variety: item.variety || ''
+            }));
+            openLightbox(plant.src, itemsList, displayName, catName);
+        });
         container.appendChild(card);
     });
     
     // Trigger animation for newly added items
     setTimeout(() => {
-        document.querySelectorAll('.stagger-item').forEach(el => {
+        container.querySelectorAll('.stagger-item').forEach(el => {
             el.classList.add('visible');
         });
     }, 50);
@@ -472,16 +544,27 @@ function initGalleryTabs() {
 }
 
 function populateGalleryGrids() {
-    // 1. Botanical Photos Grid (176.png - 188.png)
+    // 1. Botanical Photos Grid (236.png - 244.png)
     const photosGrid = document.getElementById('photosGrid');
     if (photosGrid) {
         const photoItems = photosGrid.querySelectorAll('.botanical-gallery-item');
-        photoItems.forEach((card) => {
+        photoItems.forEach((card, idx) => {
             card.addEventListener('click', () => {
-                const src = card.getAttribute('data-src') || card.querySelector('img').src;
+                const img = card.querySelector('img');
+                const src = card.getAttribute('data-src') || (img ? img.getAttribute('src') : galleryPhotos[idx]);
                 const title = card.getAttribute('data-title') || 'Sri Akshaya Nursery Greenery';
                 const category = card.getAttribute('data-category') || '🌿 Plant Photography';
-                openLightbox(src, galleryPhotos, title, category);
+                
+                const galleryItems = Array.from(photoItems).map((pCard, pIdx) => {
+                    const pImg = pCard.querySelector('img');
+                    return {
+                        src: pCard.getAttribute('data-src') || (pImg ? pImg.getAttribute('src') : galleryPhotos[pIdx]),
+                        title: pCard.getAttribute('data-title') || 'Sri Akshaya Nursery Greenery',
+                        category: pCard.getAttribute('data-category') || '🌿 Plant Photography'
+                    };
+                });
+                
+                openLightbox(src, galleryItems, title, category);
             });
         });
     }
@@ -504,7 +587,12 @@ function populateGalleryGrids() {
                 </div>
             `;
             card.addEventListener('click', () => {
-                openLightbox(src, galleryLoadings, `Plant Dispatch & Transportation #${index + 1}`, '🚛 Daily Loadings');
+                const loadingsItems = galleryLoadings.map((lSrc, lIdx) => ({
+                    src: lSrc,
+                    title: `Plant Dispatch & Transportation #${lIdx + 1}`,
+                    category: '🚛 Daily Loadings'
+                }));
+                openLightbox(src, loadingsItems, `Plant Dispatch & Transportation #${index + 1}`, '🚛 Daily Loadings');
             });
             loadingsGrid.appendChild(card);
         });
@@ -527,14 +615,24 @@ function openLightbox(src, list, title = '', category = '') {
     const captionEl = document.getElementById('lightboxCaption');
     const counterEl = document.getElementById('lightboxCounter');
     
-    currentLightboxList = list;
+    if (!lightbox || !img) return;
+    
+    currentLightboxList = Array.isArray(list) && list.length > 0 ? list : [src];
     const targetBase = getNormalizedBasename(src);
-    currentLightboxIdx = list.findIndex(item => getNormalizedBasename(item) === targetBase);
+    
+    currentLightboxIdx = currentLightboxList.findIndex(item => {
+        const itemSrc = typeof item === 'object' ? item.src : item;
+        return getNormalizedBasename(itemSrc) === targetBase;
+    });
     if (currentLightboxIdx === -1) currentLightboxIdx = 0;
     
-    img.src = currentLightboxList[currentLightboxIdx];
+    const activeItem = currentLightboxList[currentLightboxIdx];
+    const activeSrc = typeof activeItem === 'object' ? activeItem.src : activeItem;
+    const activeTitle = typeof activeItem === 'object' ? (activeItem.title || title) : title;
     
-    if (captionEl) captionEl.textContent = title;
+    img.src = activeSrc;
+    
+    if (captionEl) captionEl.textContent = activeTitle || 'Sri Akshaya Nursery';
     if (counterEl) counterEl.textContent = `${currentLightboxIdx + 1} / ${currentLightboxList.length}`;
     
     lightbox.classList.add('active');
@@ -555,24 +653,58 @@ function closeLightbox() {
 }
 
 function lightboxNav(dir) {
-    if (currentLightboxList.length <= 1) return;
+    if (!currentLightboxList || currentLightboxList.length <= 1) return;
     
     const img = document.getElementById('lightboxImg');
     const counterEl = document.getElementById('lightboxCounter');
+    const captionEl = document.getElementById('lightboxCaption');
+    
+    if (!img) return;
     
     img.style.opacity = '0';
     img.style.transform = 'scale(0.96)';
     
     setTimeout(() => {
         currentLightboxIdx = (currentLightboxIdx + dir + currentLightboxList.length) % currentLightboxList.length;
-        img.src = currentLightboxList[currentLightboxIdx];
+        const currentItem = currentLightboxList[currentLightboxIdx];
+        const nextSrc = typeof currentItem === 'object' ? currentItem.src : currentItem;
+        const nextTitle = typeof currentItem === 'object' ? (currentItem.title || '') : (currentLightboxTitles[nextSrc] || '');
+        
+        img.src = nextSrc;
         if (counterEl) counterEl.textContent = `${currentLightboxIdx + 1} / ${currentLightboxList.length}`;
+        if (captionEl && nextTitle) captionEl.textContent = nextTitle;
         
         img.onload = () => {
             img.style.opacity = '1';
             img.style.transform = 'scale(1)';
         };
     }, 180);
+}
+
+/* -------- NEW HOME FRUIT SHOWCASE -------- */
+function initHomeFruitShowcase() {
+    const showcaseGrid = document.getElementById('featuredFruitGrid');
+    if (!showcaseGrid) return;
+    
+    const fruitCards = showcaseGrid.querySelectorAll('.fruit-card');
+    const featuredItems = Array.from(fruitCards).map(card => {
+        const img = card.querySelector('img');
+        return {
+            src: card.getAttribute('data-src') || (img ? img.getAttribute('src') : ''),
+            title: card.getAttribute('data-name') || 'Fruit Plant',
+            category: card.getAttribute('data-cat') || 'Fruit Plant'
+        };
+    });
+    
+    fruitCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const img = card.querySelector('img');
+            const src = card.getAttribute('data-src') || (img ? img.getAttribute('src') : '');
+            const name = card.getAttribute('data-name') || 'Fruit Plant';
+            const cat = card.getAttribute('data-cat') || 'Fruit Plant';
+            openLightbox(src, featuredItems, name, cat);
+        });
+    });
 }
 
 // Touch swipe navigation for Lightbox

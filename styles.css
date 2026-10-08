@@ -6939,3 +6939,702 @@ img {
     background: var(--green-200);
     color: var(--green-900);
 }
+
+
+/* ================================================================
+   BOTANICAL FRUIT PLANTS SHOWCASE & LIGHTBOX REFINEMENTS
+   ================================================================ */
+
+/* --- 1. HOME FRUIT SHOWCASE SECTION --- */
+.home-fruit-showcase {
+    position: relative;
+    padding: 95px 0 105px;
+    background: #fbfdf9;
+    background-image:
+        radial-gradient(ellipse 60% 50% at 20% 20%, rgba(45, 122, 70, 0.05) 0%, transparent 70%),
+        radial-gradient(ellipse 70% 60% at 80% 80%, rgba(26, 77, 46, 0.06) 0%, transparent 70%),
+        linear-gradient(180deg, #fbfdf9 0%, #f4f8f3 50%, #fbfdf9 100%);
+    overflow: hidden;
+    border-bottom: 1px solid rgba(45, 122, 70, 0.12);
+}
+
+.home-fruit-showcase::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #2d7a46, #4caf50, #8bc34a, #2d7a46);
+    opacity: 0.85;
+}
+
+.fruit-showcase-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+}
+
+/* --- Section Header --- */
+.fruit-showcase-header {
+    text-align: center;
+    max-width: 860px;
+    margin: 0 auto 55px;
+}
+
+.fruit-showcase-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 20px;
+    background: rgba(45, 122, 70, 0.1);
+    border: 1px solid rgba(45, 122, 70, 0.25);
+    border-radius: 30px;
+    font-family: var(--font-body);
+    font-size: 11.5px;
+    font-weight: 800;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    color: #1b4d2e;
+    margin-bottom: 18px;
+}
+
+.fruit-showcase-title {
+    font-family: var(--font-heading);
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 800;
+    color: #12381f;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    margin: 0 0 16px;
+    text-transform: uppercase;
+}
+
+.fruit-showcase-desc {
+    font-family: var(--font-body);
+    font-size: clamp(15px, 1.8vw, 17px);
+    line-height: 1.65;
+    color: #3e5a45;
+    margin: 0 auto 24px;
+    max-width: 720px;
+}
+
+.fruit-showcase-quote-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    background: #ffffff;
+    border-radius: 40px;
+    box-shadow: 0 4px 18px rgba(27, 77, 46, 0.08);
+    border: 1px solid rgba(45, 122, 70, 0.18);
+    margin-bottom: 28px;
+}
+
+.quote-symbol {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    color: #2d7a46;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.fruit-quote-text {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-style: italic;
+    color: #1e4629;
+    font-weight: 600;
+    margin: 0;
+}
+
+.fruit-variety-ribbon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-family: var(--font-body);
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #2b5936;
+}
+
+.ribbon-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 5px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(45, 122, 70, 0.15);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.ribbon-chip i {
+    color: #2d7a46;
+}
+
+.ribbon-sep {
+    color: #93b59b;
+}
+
+/* --- Showcase Grid --- */
+.fruit-showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 28px;
+    margin-bottom: 60px;
+}
+
+@media (min-width: 1200px) {
+    .fruit-showcase-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* --- Fruit Card --- */
+.fruit-card {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(18, 56, 31, 0.07);
+    border: 1px solid rgba(45, 122, 70, 0.12);
+    cursor: pointer;
+    transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.35s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.fruit-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 32px rgba(18, 56, 31, 0.14);
+    border-color: rgba(45, 122, 70, 0.35);
+}
+
+.fruit-card-media {
+    position: relative;
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    background: #eef4ed;
+}
+
+.fruit-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.55s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.fruit-card:hover .fruit-card-media img {
+    transform: scale(1.03);
+}
+
+.fruit-card-tag {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 5px 12px;
+    background: rgba(14, 46, 24, 0.88);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #ffffff;
+    font-family: var(--font-body);
+    font-size: 10.5px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 2;
+}
+
+.fruit-card-hover-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 36, 18, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    z-index: 1;
+}
+
+.fruit-card:hover .fruit-card-hover-overlay {
+    opacity: 1;
+}
+
+.fruit-zoom-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #1e5631;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transform: scale(0.85);
+    transition: transform 0.3s ease;
+}
+
+.fruit-card:hover .fruit-zoom-icon {
+    transform: scale(1);
+}
+
+.fruit-zoom-label {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+.fruit-card-info {
+    padding: 18px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: #ffffff;
+}
+
+.fruit-card-eyebrow {
+    font-family: var(--font-body);
+    font-size: 10.5px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    color: #2d7a46;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.fruit-card-title {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 800;
+    color: #12381f;
+    margin: 0 0 8px;
+    line-height: 1.3;
+}
+
+.fruit-card-desc {
+    font-family: var(--font-body);
+    font-size: 13px;
+    line-height: 1.5;
+    color: #55705d;
+    margin: 0 0 16px;
+    flex: 1;
+}
+
+.fruit-card-action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 12px;
+    border-top: 1px solid #edf4ec;
+}
+
+.fruit-enquire-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    background: #eaf6ed;
+    color: #1e5631;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    border-radius: 30px;
+    border: 1px solid rgba(45, 122, 70, 0.25);
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.fruit-enquire-btn i {
+    font-size: 14px;
+    color: #25d366;
+}
+
+.fruit-enquire-btn:hover {
+    background: #1e5631;
+    color: #ffffff;
+    border-color: #1e5631;
+    box-shadow: 0 4px 12px rgba(30, 86, 49, 0.25);
+}
+
+.fruit-enquire-btn:hover i {
+    color: #ffffff;
+}
+
+/* --- Section Bottom CTA --- */
+.fruit-showcase-cta {
+    margin-top: 20px;
+}
+
+.fruit-cta-box {
+    background: linear-gradient(135deg, #133c20 0%, #0e2e18 100%);
+    border-radius: 22px;
+    padding: 42px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    box-shadow: 0 16px 40px rgba(10, 36, 18, 0.18);
+    border: 1px solid rgba(168, 230, 207, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.fruit-cta-box::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(168, 230, 207, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.fruit-cta-content {
+    max-width: 620px;
+    position: relative;
+    z-index: 1;
+}
+
+.fruit-cta-eyebrow {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #a8e6cf;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.fruit-cta-title {
+    font-family: var(--font-heading);
+    font-size: clamp(22px, 2.8vw, 32px);
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 10px;
+    line-height: 1.25;
+}
+
+.fruit-cta-text {
+    font-family: var(--font-body);
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #d1ead7;
+    margin: 0;
+}
+
+.fruit-cta-buttons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-fruit-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 26px;
+    background: #a8e6cf;
+    color: #0b2a14;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-fruit-primary:hover {
+    background: #ffffff;
+    color: #0b2a14;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(168, 230, 207, 0.35);
+}
+
+.btn-fruit-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    font-family: var(--font-body);
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-fruit-secondary i {
+    color: #25d366;
+    font-size: 15px;
+}
+
+.btn-fruit-secondary:hover {
+    background: rgba(255, 255, 255, 0.22);
+    border-color: #a8e6cf;
+    color: #a8e6cf;
+}
+
+/* --- 2. VARIETIES CARD REFINEMENT --- */
+.varieties-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    padding: 15px 18px 18px;
+}
+
+.varieties-card-title {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 800;
+    color: #12381f;
+    margin: 2px 0 0;
+    line-height: 1.3;
+}
+
+.varieties-card-sub {
+    font-family: var(--font-body);
+    font-size: 12px;
+    color: #4a7556;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 6px;
+}
+
+.varieties-card-sub .sub-leaf {
+    font-size: 11px;
+}
+
+.varieties-card-quote {
+    align-self: flex-start;
+    margin-top: 4px;
+}
+
+/* --- 3. PREMIUM NURSERY-STYLE LIGHTBOX ARROWS --- */
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(22, 65, 36, 0.85) !important;
+    border: 1px solid rgba(168, 230, 207, 0.4) !important;
+    color: #ffffff !important;
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    font-size: 16px !important;
+    transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+    z-index: 100001 !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35) !important;
+}
+
+.lightbox-prev {
+    left: 28px !important;
+}
+
+.lightbox-next {
+    right: 28px !important;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: #1e5631 !important;
+    border-color: #a8e6cf !important;
+    color: #ffffff !important;
+    transform: translateY(-50%) scale(1.08) !important;
+    box-shadow: 0 6px 24px rgba(30, 86, 49, 0.6), 0 0 16px rgba(168, 230, 207, 0.4) !important;
+}
+
+/* --- 4. RESPONSIVE MEDIA QUERIES --- */
+@media (max-width: 992px) {
+    .home-fruit-showcase {
+        padding: 70px 0 80px;
+    }
+    .fruit-showcase-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .fruit-cta-box {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 32px 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-fruit-showcase {
+        padding: 55px 0 65px;
+    }
+    .fruit-showcase-header {
+        margin-bottom: 35px;
+    }
+    .fruit-showcase-title {
+        font-size: 24px;
+    }
+    .fruit-showcase-desc {
+        font-size: 14px;
+        margin-bottom: 18px;
+    }
+    .fruit-showcase-quote-box {
+        padding: 10px 18px;
+        margin-bottom: 20px;
+    }
+    .fruit-quote-text {
+        font-size: 12.5px;
+    }
+    .fruit-variety-ribbon {
+        font-size: 11.5px;
+        gap: 8px;
+    }
+    .fruit-showcase-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+        margin-bottom: 40px;
+    }
+    .fruit-card {
+        border-radius: 14px;
+    }
+    .fruit-card:hover {
+        transform: none; /* Disable heavy transform on touch screens */
+        box-shadow: 0 4px 18px rgba(18, 56, 31, 0.07);
+    }
+    .fruit-card-media {
+        height: 160px;
+    }
+    .fruit-card-tag {
+        font-size: 9px;
+        padding: 3px 8px;
+        top: 8px;
+        left: 8px;
+    }
+    .fruit-card-info {
+        padding: 12px 12px 14px;
+    }
+    .fruit-card-eyebrow {
+        font-size: 9px;
+    }
+    .fruit-card-title {
+        font-size: 14.5px;
+        margin-bottom: 4px;
+    }
+    .fruit-card-desc {
+        font-size: 11.5px;
+        margin-bottom: 10px;
+        line-height: 1.4;
+    }
+    .fruit-card-action {
+        padding-top: 8px;
+    }
+    .fruit-enquire-btn {
+        padding: 6px 12px;
+        font-size: 11px;
+        width: 100%;
+        justify-content: center;
+    }
+    .fruit-cta-box {
+        padding: 24px 20px;
+        border-radius: 16px;
+    }
+    .fruit-cta-title {
+        font-size: 20px;
+    }
+    .fruit-cta-text {
+        font-size: 13px;
+    }
+    .fruit-cta-buttons {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .btn-fruit-primary,
+    .btn-fruit-secondary {
+        justify-content: center;
+        width: 100%;
+    }
+    /* Lightbox arrows on mobile */
+    .lightbox-prev,
+    .lightbox-next {
+        width: 42px !important;
+        height: 42px !important;
+        font-size: 14px !important;
+    }
+    .lightbox-prev {
+        left: 12px !important;
+    }
+    .lightbox-next {
+        right: 12px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .fruit-showcase-container {
+        padding: 0 16px;
+    }
+    .fruit-showcase-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .fruit-card-media {
+        height: 135px;
+    }
+    .fruit-card-info {
+        padding: 10px 8px 12px;
+    }
+    .fruit-card-title {
+        font-size: 13px;
+    }
+    .fruit-card-desc {
+        display: none; /* Hide long descriptor on very small mobile for clean grid */
+    }
+}
+
+@media (max-width: 360px) {
+    .fruit-showcase-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+    .fruit-card-media {
+        height: 180px;
+    }
+    .fruit-card-desc {
+        display: block;
+    }
+}
