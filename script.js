@@ -235,7 +235,7 @@ function animateHeroText() {
 
 /* -------- SCROLL REVEAL -------- */
 function initScrollReveal() {
-    const revealElements = document.querySelectorAll('.reveal-left, .reveal-right, .reveal-up');
+    const revealElements = document.querySelectorAll('.reveal-left, .reveal-right, .reveal-up, .stagger-item');
     
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
